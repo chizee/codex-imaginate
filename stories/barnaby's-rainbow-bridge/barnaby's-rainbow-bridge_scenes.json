@@ -1,0 +1,113 @@
+[
+  {
+    "index": 1,
+    "title": "After the Rain",
+    "text": "The rain had just stopped, and little Barnaby poked his nose out of his burrow. The whole meadow sparkled with tiny water drops, like someone had scattered diamonds on the grass. Barnaby's nose twitched with excitement — it was time to explore!",
+    "description": "A small cream-colored bunny with one floppy ear peeks out from a cozy round burrow entrance in a grassy hill. The meadow beyond is bright green, covered in glistening water droplets. Soft golden sunlight breaks through fading gray clouds. Wildflowers in pink, yellow, and purple dot the grass. Warm morning light.",
+    "location": "Barnaby's Burrow Entrance",
+    "characters": [
+      "Barnaby"
+    ],
+    "mood": "wonder and curiosity",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 2,
+    "title": "A Colorful Discovery",
+    "text": "Barnaby hopped through the wet meadow when he saw something magical — a shimmering rainbow arched across the sky, its colors glowing bright. But what made his ears perk up was that the rainbow seemed to touch the ground just beyond the old oak tree!",
+    "description": "Barnaby the bunny stands on his hind legs in the meadow, looking up in amazement with wide brown eyes and mouth slightly open. A vivid, glowing rainbow stretches across a clearing sky behind soft clouds. The rainbow's end curves down toward a large old oak tree in the distance. Barnaby's blue scarf flutters in a gentle breeze. Sunbeams stream through clouds.",
+    "location": "The Sparkling Meadow",
+    "characters": [
+      "Barnaby"
+    ],
+    "mood": "awe and excitement",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 3,
+    "title": "A New Friend",
+    "text": "\"Are you going to find the rainbow?\" chirped a cheerful voice. Barnaby looked up to see Pip, a little robin, landing on a mushroom nearby. \"I've always wanted to see where it ends!\" said Barnaby. \"Then let's go together!\" chirped Pip happily.",
+    "description": "Barnaby the bunny sits on the grass looking up at a tiny round robin bird perched on top of a red-and-white spotted mushroom. The robin has an orange-red breast and is facing Barnaby with an open beak as if singing. Wildflowers surround them. The rainbow glows softly in the background sky. Dappled sunlight filters through nearby trees.",
+    "location": "The Sparkling Meadow",
+    "characters": [
+      "Barnaby",
+      "Pip"
+    ],
+    "mood": "friendly and joyful",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 4,
+    "title": "Through the Wildflower Field",
+    "text": "Barnaby and Pip set off together, hopping and fluttering through a field of tall wildflowers. The flowers were so high that Barnaby had to push through them like a jungle! Pip flew above, calling out directions — \"Left at the daisies, right at the buttercups!\"",
+    "description": "Barnaby the bunny pushes through tall colorful wildflowers — daisies, buttercups, and purple lavender — that reach above his head. Flower petals and pollen float in the air around him. His blue scarf trails behind. Above, Pip the robin flies with wings spread, looking down and pointing with one wing. The rainbow glows ahead of them. Bright, warm midday light.",
+    "location": "Wildflower Field",
+    "characters": [
+      "Barnaby",
+      "Pip"
+    ],
+    "mood": "adventurous and playful",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 5,
+    "title": "The Wobbly Log Bridge",
+    "text": "A babbling brook blocked their path, with only a mossy old log to cross. Barnaby's little paws trembled, but Pip landed on his shoulder and whispered, \"You can do it, Barnaby! One hop at a time.\" And hop by hop, he made it across!",
+    "description": "Barnaby the bunny carefully balances on a mossy brown log stretching across a small sparkling blue brook. His arms are out for balance, eyes focused, one paw mid-step. Pip the robin sits on Barnaby's shoulder near his floppy ear, looking encouraging. Water glistens over smooth colorful pebbles below. Ferns and small green plants grow along the brook's banks. Soft filtered forest light.",
+    "location": "The Babbling Brook",
+    "characters": [
+      "Barnaby",
+      "Pip"
+    ],
+    "mood": "tense but hopeful",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 6,
+    "title": "The Rainbow's End",
+    "text": "At last, they reached the old oak tree — and there it was! The rainbow touched the ground in a soft, shimmering pool of colored light that danced on the grass like gentle fireflies. Barnaby stepped into the glow and felt the warmest, happiest feeling in his whole fluffy body.",
+    "description": "Barnaby the bunny stands at the base of a massive old oak tree with gnarled roots, bathed in a magical pool of rainbow-colored light shimmering on the ground. Colors of red, orange, yellow, green, blue, and violet glow and sparkle around him like floating particles. Barnaby's eyes are closed with a blissful smile, arms slightly raised. Pip the robin perches on an oak root, glowing in the colorful light. Ethereal, magical golden-hour lighting.",
+    "location": "The Old Oak Tree",
+    "characters": [
+      "Barnaby",
+      "Pip"
+    ],
+    "mood": "magical and peaceful",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 7,
+    "title": "A Pocket Full of Colors",
+    "text": "Barnaby giggled as the colors swirled around his paws. He gently scooped up a little rainbow glow and tucked it into his scarf, like a treasure. \"I want to share this with everyone,\" he said softly. Pip smiled and said, \"The best treasures are the ones you share.\"",
+    "description": "Barnaby the bunny kneels on the colorful glowing ground, gently cupping shimmering rainbow light between his small paws. Tiny sparkles of colored light float upward from his paws like fireflies. His blue scarf glows faintly with rainbow hues. He has a gentle, tender smile. Pip the robin watches from a low oak branch with a warm expression. Soft, dreamy rainbow light illuminates the scene. The old oak tree looms warmly behind them.",
+    "location": "The Old Oak Tree",
+    "characters": [
+      "Barnaby",
+      "Pip"
+    ],
+    "mood": "tender and heartwarming",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 8,
+    "title": "Home Again",
+    "text": "Barnaby hopped home with Pip flying beside him, the little rainbow glow tucked safely in his scarf. When Mama Bunny saw him, she smiled the biggest smile. \"Look, Mama!\" Barnaby opened his scarf and the rainbow light filled their whole burrow with warmth and color. And from that day on, Barnaby knew — the most beautiful things in life are the ones you discover with a friend and share with those you love.",
+    "description": "Inside a cozy underground burrow with round earthen walls, Mama Bunny hugs Barnaby tightly. Barnaby's blue scarf is open, releasing a beautiful warm rainbow glow that illuminates the entire burrow in soft colorful light. Pip the robin perches happily on a little wooden shelf nearby. The burrow is decorated with small flower pots, a tiny bed, and hanging dried herbs. The scene is warm, golden, and filled with love.",
+    "location": "Inside Barnaby's Burrow",
+    "characters": [
+      "Barnaby",
+      "Mama Bunny",
+      "Pip"
+    ],
+    "mood": "loving and triumphant",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  }
+]

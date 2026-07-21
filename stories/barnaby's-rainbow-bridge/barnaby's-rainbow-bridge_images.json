@@ -1,0 +1,40 @@
+{
+  "images": [
+    {
+      "scene_index": 0,
+      "prompt": "A full-body portrait of Barnaby, A small, fluffy cream-colored bunny with one floppy left ear, big round brown eyes, a tiny pink nose, rosy cheeks, and a puffy white tail. Wears a little blue scarf around his neck., standing in a neutral pose, plain light background, front view, good lighting, Soft, warm watercolor-style illustrations with gentle pastel tones and delicate hand-drawn outlines. Dreamy, storybook quality with slightly rounded shapes, cozy textures, and glowing light effects. Inspired by classic children's picture books like Beatrix Potter and Ernest Shepard, with a modern whimsical touch. Characters have expressive, cute faces with big eyes and soft features.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/36/20260721/7a9d0e9f/fc1b8e12-78ee-4633-a5f7-14fbe60e7ce4.png?Expires=1785239164&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=Hy648A5X%2BIlniCchXOxcYY%2Fi2OQ%3D",
+      "local_path": "stories\\barnaby's-rainbow-bridge\\ref_barnaby.png",
+      "seed": 0,
+      "character_name": "Barnaby",
+      "image_type": "reference",
+      "validation_status": "pending",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 0,
+      "prompt": "A full-body portrait of Pip, A tiny round robin with warm orange-red breast feathers, dark brown wings, bright black bead-like eyes, and a cheerful little yellow beak. Slightly smaller than Barnaby., standing in a neutral pose, plain light background, front view, good lighting, Soft, warm watercolor-style illustrations with gentle pastel tones and delicate hand-drawn outlines. Dreamy, storybook quality with slightly rounded shapes, cozy textures, and glowing light effects. Inspired by classic children's picture books like Beatrix Potter and Ernest Shepard, with a modern whimsical touch. Characters have expressive, cute faces with big eyes and soft features.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/30/20260721/7a9d0e9f/5eb5b49f-724c-4037-a334-aace5fa9eebf.png?Expires=1785239180&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=Q4TggcQoWolx%2BXi7rmdBmOltGd8%3D",
+      "local_path": "stories\\barnaby's-rainbow-bridge\\ref_pip.png",
+      "seed": 0,
+      "character_name": "Pip",
+      "image_type": "reference",
+      "validation_status": "pending",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 0,
+      "prompt": "A full-body portrait of Mama Bunny, A larger cream-colored bunny with both ears standing straight, soft brown eyes, and a warm smile. Wears a daisy tucked behind one ear., standing in a neutral pose, plain light background, front view, good lighting, Soft, warm watercolor-style illustrations with gentle pastel tones and delicate hand-drawn outlines. Dreamy, storybook quality with slightly rounded shapes, cozy textures, and glowing light effects. Inspired by classic children's picture books like Beatrix Potter and Ernest Shepard, with a modern whimsical touch. Characters have expressive, cute faces with big eyes and soft features.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/2a/20260721/7a9d0e9f/348ac34e-1bbc-4b1c-9960-341baa2f723b.png?Expires=1785239225&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=NfnofP9DJtM%2BnPB%2B0PDuki5G1ok%3D",
+      "local_path": "stories\\barnaby's-rainbow-bridge\\ref_mama_bunny.png",
+      "seed": 0,
+      "character_name": "Mama Bunny",
+      "image_type": "reference",
+      "validation_status": "pending",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}

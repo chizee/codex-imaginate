@@ -1,0 +1,38 @@
+{
+  "slug": "barnaby's-rainbow-bridge",
+  "prompt": "A cute bunny finds a rainbow",
+  "age_group": "kids",
+  "output_dir": "stories\\barnaby's-rainbow-bridge",
+  "phases": {
+    "script": {
+      "phase": "script",
+      "status": "done",
+      "error": null
+    },
+    "character_refs": {
+      "phase": "character_refs",
+      "status": "done",
+      "error": null
+    },
+    "scene_images": {
+      "phase": "scene_images",
+      "status": "running",
+      "error": null
+    },
+    "narration": {
+      "phase": "narration",
+      "status": "pending",
+      "error": null
+    },
+    "video": {
+      "phase": "video",
+      "status": "pending",
+      "error": null
+    },
+    "export": {
+      "phase": "export",
+      "status": "pending",
+      "error": null
+    }
+  }
+}

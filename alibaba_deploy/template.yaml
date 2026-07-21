@@ -1,0 +1,48 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: 'Aliyun::Serverless-2018-04-03'
+Description: Imaginate on Alibaba Cloud Function Compute
+
+Resources:
+  ImaginateService:
+    Type: 'Aliyun::Serverless::Service'
+    Properties:
+      Description: Imaginate backend
+      InternetAccess: true
+      NasConfig: Auto
+
+  ImaginateFunction:
+    Type: 'Aliyun::Serverless::Function'
+    Properties:
+      Handler: web_ui.backend.main.handler
+      Runtime: python3.12
+      CodeUri: ../
+      MemorySize: 4096
+      Timeout: 600
+      EnvironmentVariables:
+        DASHSCOPE_API_KEY: '{{ DASHSCOPE_API_KEY }}'
+        QWEN_API_BASE: 'https://ws-s8blchl8lx57ttc9.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1'
+        QWEN_DASHSCOPE_BASE: 'https://ws-s8blchl8lx57ttc9.ap-southeast-1.maas.aliyuncs.com/api/v1'
+
+  ImaginateApi:
+    Type: 'Aliyun::Serverless::Api'
+    Properties:
+      StageName: RELEASE
+      DefinitionBody:
+        '/':
+          get:
+            x-aliyun-apigateway-api-type: PUBLIC
+            x-aliyun-apigateway-fc:
+              arn: acs:fc:::services/${ImaginateService}/functions/${ImaginateFunction}
+        '/{proxy+}':
+          any:
+            x-aliyun-apigateway-api-type: PUBLIC
+            x-aliyun-apigateway-fc:
+              arn: acs:fc:::services/${ImaginateService}/functions/${ImaginateFunction}
+
+  ImaginateOssBucket:
+    Type: 'Aliyun::Serverless::OSS::Bucket'
+    Properties:
+      BucketName: imaginate-assets
+      LifecycleRules:
+        - Status: Enabled
+          ExpirationInDays: 7

@@ -1,0 +1,89 @@
+{
+  "title": "Imaginate — Sprint 1: Core Engine",
+  "description": "End-to-end Python CLI pipeline on Qwen Cloud: prompt → story → scenes + bible → character-consistent images → TTS narration → HTML storybook",
+  "stories": [
+    {
+      "id": "US-001",
+      "title": "Project scaffold, config, and Qwen client",
+      "passes": true,
+      "description": "Create project directory structure, settings loader, and reusable Qwen Cloud API client",
+      "acceptanceCriteria": [
+        "imaginate-ai/ directory exists with shared/config/settings.py that loads DASHSCOPE_API_KEY from .env",
+        "agent_orchestrator/qwen_client.py has QwenClient class supporting chat completions (qwen3.7-max), image generation (qwen-image-2.0-pro), and TTS",
+        "QwenClient handles API errors with retry logic (max 3 retries)",
+        "requirements.txt lists: openai, python-dotenv, requests"
+      ]
+    },
+    {
+      "id": "US-002",
+      "title": "Data models for story pipeline",
+      "passes": true,
+      "description": "Shared data models for Story, Scene, Character, CharacterBible, ImageRecord, PipelineState with JSON serialization",
+      "acceptanceCriteria": [
+        "shared/models/story.py defines: Story, Scene, Character, CharacterBible dataclasses with to_dict/from_dict methods",
+        "shared/models/pipeline.py defines: PipelineState with stage tracking, slug, status enum, serialization",
+        "ImageRecord model stores: scene_index, prompt, image_url, seed, character_name, validation_status",
+        "All models serialize to/from JSON for persistence"
+      ]
+    },
+    {
+      "id": "US-003",
+      "title": "Story script generator",
+      "passes": true,
+      "description": "Qwen3.7-max structured output to generate full story script with scenes, characters, and bible from a user prompt",
+      "acceptanceCriteria": [
+        "script_generator/script_generator.py takes a user prompt string and age group (kids/adult)",
+        "Uses qwen3.7-max with structured JSON output to produce: title, characters[], scenes[] with text/description/mood",
+        "CharacterBible includes: name, age, appearance details",
+        "Test with prompt produces valid output files"
+      ]
+    },
+    {
+      "id": "US-004",
+      "title": "Image generation with character consistency",
+      "passes": true,
+      "description": "Qwen Image 2.0 Pro pipeline: generate character reference images then scene images",
+      "acceptanceCriteria": [
+        "image_generation/qwen_image_client.py generates images via qwen-image-2.0-pro model",
+        "image_generation/character_consistency/reference_manager.py generates one reference image per character",
+        "image_generation/character_consistency/prompt_assembler.py builds scene prompts with character descriptions from bible",
+        "image_generation/character_consistency/continuity_classifier.py classifies each scene",
+        "All images save as PNG in story output directory"
+      ]
+    },
+    {
+      "id": "US-005",
+      "title": "TTS narration",
+      "passes": true,
+      "description": "Text-to-speech via qwen3-tts-instruct-flash",
+      "acceptanceCriteria": [
+        "Generates one MP3 per scene",
+        "Output files named {slug}_part_NN.mp3",
+        "All 8/8 scenes in test received TTS"
+      ]
+    },
+    {
+      "id": "US-006",
+      "title": "HTML storybook exporter",
+      "passes": true,
+      "description": "Self-contained HTML storybook with embedded images and audio",
+      "acceptanceCriteria": [
+        "Single self-contained HTML file with page-flip navigation",
+        "8 images + 8 audio clips embedded as base64",
+        "Works offline, mobile-friendly with swipe"
+      ]
+    },
+    {
+      "id": "US-007",
+      "title": "End-to-end orchestrator CLI",
+      "passes": true,
+      "description": "Main pipeline orchestrator",
+      "acceptanceCriteria": [
+        "CLI entry: python -m imaginate runs full pipeline",
+        "Pipeline state persisted after each phase",
+        "Final output is a single HTML file with all assets",
+        "Verified: 8 scenes, 8 images, 8 audio, 20.9MB HTML"
+      ]
+    }
+  ]
+}

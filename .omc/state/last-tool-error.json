@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"gh repo create imaginate-ai --public --source=. --remote=origin --push 2>&1\",\"timeout\":60000,\"description\":\"Create GitHub repo and push project\"}",
+  "error": "Exit code 1\ncurrent directory is not a git repository. Run `git init` to initialize it",
+  "timestamp": "2026-07-21T11:54:13.013Z",
+  "retry_count": 1
+}

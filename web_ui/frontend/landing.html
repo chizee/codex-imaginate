@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imaginate — Where imagination becomes storybooks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #050510; --surface: #0c0c1d; --border: #1a1a35;
+    --text: #e8e8f0; --text-muted: #7a7a9a;
+    --amber: #c47a1a; --amber-light: #f5d9a0; --amber-glow: rgba(196,122,26,0.15);
+    --violet: #7c3aed; --violet-glow: rgba(124,58,237,0.12);
+    --max-w: 1200px; --radius: 14px;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+
+  .nav { position:fixed; top:0; width:100%; z-index:100; padding:16px 24px; background:rgba(5,5,16,0.85); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+  .nav-inner { max-width:var(--max-w); margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+  .nav-logo { font-size:1.4em; font-weight:800; letter-spacing:-0.03em; display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--text); }
+  .nav-logo span { background:linear-gradient(135deg,var(--amber-light),var(--amber)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .nav-cta { display:flex; gap:12px; align-items:center; }
+  .beta-badge { background:var(--violet-glow); color:var(--violet); padding:5px 12px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.05em; border:1px solid rgba(124,58,237,0.25); }
+  .nav-btn { padding:8px 20px; border-radius:8px; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.2s; text-decoration:none; font-family:'Inter',sans-serif; }
+  .nav-btn.primary { background:var(--amber); color:#050510; border:none; }
+  .nav-btn.primary:hover { background:var(--amber-light); transform:translateY(-1px); }
+  .nav-btn.ghost { background:transparent; color:var(--text-muted); border:1px solid var(--border); }
+  .nav-btn.ghost:hover { border-color:var(--amber); color:var(--amber-light); }
+
+  .hero { padding:160px 24px 80px; text-align:center; max-width:900px; margin:0 auto; position:relative; }
+  .hero::before { content:''; position:absolute; top:60px; left:50%; transform:translateX(-50%); width:500px; height:300px; background:radial-gradient(ellipse,var(--amber-glow) 0%,transparent 70%); pointer-events:none; }
+  .hero-badge { display:inline-flex; align-items:center; gap:6px; background:var(--violet-glow); color:var(--violet); padding:6px 16px; border-radius:100px; font-size:12px; font-weight:600; margin-bottom:28px; border:1px solid rgba(124,58,237,0.25); }
+  .hero h1 { font-size:clamp(2.8em,7vw,5em); font-weight:900; letter-spacing:-0.04em; line-height:1.05; margin-bottom:24px; }
+  .hero h1 .gradient { background:linear-gradient(135deg,#f5d9a0 0%,#e8a040 40%,#c47a1a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero p { font-size:1.2em; color:var(--text-muted); line-height:1.7; max-width:650px; margin:0 auto 40px; }
+  .hero-cta { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn { padding:14px 32px; border-radius:10px; font-size:16px; font-weight:600; cursor:pointer; transition:all 0.2s; border:none; text-decoration:none; font-family:'Inter',sans-serif; display:inline-flex; align-items:center; gap:8px; }
+  .btn-primary { background:var(--amber); color:#050510; }
+  .btn-primary:hover { background:var(--amber-light); transform:translateY(-2px); box-shadow:0 8px 24px var(--amber-glow); }
+  .btn-secondary { background:transparent; color:var(--text); border:1px solid var(--border); }
+  .btn-secondary:hover { border-color:var(--amber); color:var(--amber-light); }
+  .hero-hint { margin-top:20px; font-size:13px; color:var(--text-muted); opacity:0.6; }
+
+  .section { max-width:var(--max-w); margin:0 auto; padding:80px 24px; }
+  .section-label { text-align:center; font-size:12px; font-weight:700; letter-spacing:0.1em; color:var(--amber); text-transform:uppercase; margin-bottom:16px; }
+  .section h2 { text-align:center; font-size:clamp(1.8em,4vw,2.8em); font-weight:800; letter-spacing:-0.03em; margin-bottom:16px; }
+  .section .subtitle { text-align:center; color:var(--text-muted); font-size:1.1em; margin-bottom:56px; max-width:600px; margin-left:auto; margin-right:auto; }
+
+  .steps-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+  .step-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:32px 24px; text-align:center; transition:all 0.3s; position:relative; overflow:hidden; }
+  .step-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--amber),transparent); opacity:0; transition:opacity 0.3s; }
+  .step-card:hover { border-color:rgba(196,122,26,0.3); transform:translateY(-4px); }
+  .step-card:hover::before { opacity:1; }
+  .step-num { width:44px; height:44px; border-radius:50%; background:var(--amber-glow); color:var(--amber-light); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:18px; margin:0 auto 20px; border:1px solid rgba(196,122,26,0.2); }
+  .step-card h4 { font-size:1.1em; font-weight:700; margin-bottom:8px; }
+  .step-card p { font-size:14px; color:var(--text-muted); line-height:1.6; }
+
+  .emotional { background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+  .emotional-inner { max-width:var(--max-w); margin:0 auto; padding:80px 24px; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  .emotional-text h2 { font-size:clamp(1.8em,4vw,2.5em); font-weight:800; letter-spacing:-0.03em; margin-bottom:20px; text-align:left; font-family:'Playfair Display',Georgia,serif; }
+  .emotional-text p { font-size:1.1em; color:var(--text-muted); line-height:1.8; margin-bottom:24px; }
+  .emotional-text .quote { border-left:3px solid var(--amber); padding-left:20px; font-style:italic; color:var(--amber-light); margin:28px 0; font-size:1.1em; }
+  .emotional-visual { display:flex; align-items:center; justify-content:center; }
+  .visual-card { background:var(--bg); border:1px solid var(--border); border-radius:var(--radius); padding:40px; text-align:center; width:100%; max-width:400px; }
+  .visual-card .book-icon { font-size:5em; margin-bottom:20px; }
+  .visual-card h4 { font-family:'Playfair Display',Georgia,serif; font-size:1.4em; font-weight:700; margin-bottom:8px; }
+
+  .features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+  .feature-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; transition:all 0.2s; }
+  .feature-card:hover { border-color:rgba(196,122,26,0.3); }
+  .feature-card .icon { font-size:2em; margin-bottom:12px; }
+  .feature-card h4 { font-weight:700; margin-bottom:8px; }
+  .feature-card p { font-size:14px; color:var(--text-muted); line-height:1.6; }
+
+  .cta-section { text-align:center; padding:80px 24px; }
+  .cta-card { background:linear-gradient(135deg,rgba(196,122,26,0.08),rgba(124,58,237,0.06)); border:1px solid rgba(196,122,26,0.2); border-radius:var(--radius); padding:56px 32px; max-width:700px; margin:0 auto; }
+  .cta-card h2 { font-size:2em; font-weight:800; margin-bottom:12px; }
+  .cta-card p { color:var(--text-muted); font-size:1.1em; margin-bottom:28px; }
+  .cta-card .beta-note { margin-top:20px; font-size:13px; color:var(--text-muted); opacity:0.7; }
+  .cta-card .beta-note strong { color:var(--violet); }
+
+  footer { border-top:1px solid var(--border); padding:32px 24px; text-align:center; color:var(--text-muted); font-size:13px; }
+  footer a { color:var(--amber); text-decoration:none; }
+
+  @media (max-width:768px) {
+    .emotional-inner { grid-template-columns:1fr; gap:32px; }
+    .hero { padding:120px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">✦ <span>Imaginate</span></a>
+    <div class="nav-cta">
+      <span class="beta-badge">BETA</span>
+      <a href="/app" class="nav-btn ghost">Sign In</a>
+      <a href="/app" class="nav-btn primary">Try Free ✦</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">✦ Now in Public Beta — Free Storybook Generation</div>
+  <h1>Stop reading the <span class="gradient">same bedtime story</span> every night.</h1>
+  <p>Imagine typing "a brave puppy who builds a rocket ship from cardboard boxes" — and watching it become a complete, illustrated, narrated storybook in minutes. That's Imaginate.</p>
+  <div class="hero-cta">
+    <a href="/app" class="btn btn-primary">✦ Create Your First Storybook</a>
+    <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+  </div>
+  <p class="hero-hint">No credit card required. Free during beta.</p>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="section-label">How It Works</div>
+  <h2>One prompt. Endless stories.</h2>
+  <p class="subtitle">Type any idea — Imaginate handles the rest.</p>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h4>Describe Your Idea</h4>
+      <p>Type a story idea in plain English. A brave fox, a magical garden, a journey through the stars.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h4>AI Writes the Script</h4>
+      <p>Our AI writes a complete story with characters, scenes, and narrative arc — tuned for any age.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h4>Characters Come to Life</h4>
+      <p>AI generates consistent character illustrations that stay the same from page 1 to the end.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <h4>Narrated & Ready</h4>
+      <p>Every page gets warm narration audio. Swipe through, listen along, or download.</p>
+    </div>
+  </div>
+</section>
+
+<section class="emotional">
+  <div class="emotional-inner">
+    <div class="emotional-text">
+      <h2>You've read "Goodnight Moon" forty-three times.</h2>
+      <p>You know every word. Your kid knows every word. The spine is held together by love and tape.</p>
+      <p>That book is a treasure. But what if tonight — and every night — you could create something new together? A story starring their ideas. A brave hamster astronaut. A unicorn who bakes. A treehouse that leads to cloud kingdoms.</p>
+      <div class="quote">"Mommy, can we make a story about a penguin who wants to fly?"</div>
+      <p>Two minutes later: a complete illustrated storybook about Pippin the Penguin, with eight beautiful scenes and a narrator reading every page aloud.</p>
+      <p><strong>That's Imaginate.</strong></p>
+    </div>
+    <div class="emotional-visual">
+      <div class="visual-card">
+        <div class="book-icon">📖</div>
+        <h4>"Pippin's First Flight"</h4>
+        <p style="color:var(--text-muted);font-size:14px">8 illustrated scenes<br>Narrated by Ethan<br>Ready in under 5 minutes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-label">Features</div>
+  <h2>Everything you need</h2>
+  <p class="subtitle">Powered by Qwen Cloud AI — built for parents, creators, and dreamers.</p>
+  <div class="features-grid">
+    <div class="feature-card"><div class="icon">🎨</div><h4>Character-Consistent Art</h4><p>Characters keep their look across every scene thanks to our visual bible system.</p></div>
+    <div class="feature-card"><div class="icon">🎙️</div><h4>Natural Narration</h4><p>Choose from warm American voices — Ethan, Serena, or Cherry — for expressive reading.</p></div>
+    <div class="feature-card"><div class="icon">📱</div><h4>Works Everywhere</h4><p>Interactive HTML storybooks work on phones, tablets, and laptops with swipe navigation.</p></div>
+    <div class="feature-card"><div class="icon">📥</div><h4>Download & Share</h4><p>Export as HTML, PDF, or EPUB. Share with grandparents anywhere in the world.</p></div>
+    <div class="feature-card"><div class="icon">👶</div><h4>Age-Appropriate</h4><p>Tuned for kids (3-8), older kids (9-12), or all ages. Right reading level, right tone.</p></div>
+    <div class="feature-card"><div class="icon">⚡</div><h4>Under 5 Minutes</h4><p>From prompt to finished book — illustrations, narration, everything — in under five minutes.</p></div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-card">
+    <h2>✦ Start Creating Tonight</h2>
+    <p>Storybook generation is completely free during our public beta. No credit card, no subscription — just pure imagination.</p>
+    <a href="/app" class="btn btn-primary">✦ Try Imaginate Free</a>
+    <p class="beta-note"><strong>Beta Notice:</strong> We're polishing the experience. During beta, storybook creation is free and unlimited. A subscription and credit system will be added soon — early users will be grandfathered in with special benefits. ✦</p>
+  </div>
+</section>
+
+<footer>
+  <p>✦ <strong>Imaginate</strong> — Where imagination becomes storybooks. Built on <a href="#">Qwen Cloud</a>.</p>
+  <p style="margin-top:8px">&copy; 2026 Chinedu Opara. All rights reserved.</p>
+</footer>
+</body>
+</html>
