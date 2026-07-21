@@ -59,6 +59,17 @@ async def serve_landing():
             return HTMLResponse(f.read())
     return {"error": "frontend not found"}
 
+
+@app.get("/app")
+async def serve_app():
+    from fastapi.responses import HTMLResponse
+    index = os.path.join(frontend_dir, "index.html")
+    if os.path.exists(index):
+        with open(index, encoding="utf-8") as f:
+            return HTMLResponse(f.read())
+    return {"error": "app not found"}
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
