@@ -1,0 +1,155 @@
+{
+  "title": "Barnaby's First Flight",
+  "prompt": "A young dragon learns to fly with a tiny bird",
+  "age_group": "kids",
+  "bible": {
+    "characters": {
+      "Barnaby": {
+        "name": "Barnaby",
+        "age": "Young child (dragon years)",
+        "role": "protagonist",
+        "appearance": "A small, chubby dragon with soft mint-green scales, a pale yellow belly, big round amber eyes, tiny stubby wings that seem too small for his round body, little orange spikes along his back, and a short tail with a heart-shaped tip. He wears a tiny red scarf around his neck.",
+        "personality": "Shy, gentle, a little scared of heights, but determined and kind-hearted",
+        "notes": "He is the last dragon in his family to learn how to fly"
+      },
+      "Pip": {
+        "name": "Pip",
+        "age": "Young bird",
+        "role": "sidekick",
+        "appearance": "A tiny, fluffy sky-blue bird with a bright orange beak, big sparkly black eyes, rosy cheek patches, and a little tuft of feathers on top of his head that bounces when he moves. He has delicate white-tipped wings.",
+        "personality": "Cheerful, encouraging, brave for his size, endlessly patient and optimistic",
+        "notes": "Pip becomes Barnaby's flying coach and best friend"
+      },
+      "Mama Dragon": {
+        "name": "Mama Dragon",
+        "age": "Adult",
+        "role": "supporting",
+        "appearance": "A large, graceful dragon with deep emerald-green scales, warm golden eyes, long elegant wings, and a gentle smile. She wears a necklace of smooth river stones.",
+        "personality": "Loving, patient, supportive",
+        "notes": "She watches proudly from the cave entrance"
+      }
+    },
+    "locations": {
+      "The High Cliff": "A tall, grassy cliff with wildflowers in yellow, purple, and white. The edge is soft and rounded with mossy patches. A stunning view of a lush valley below with a winding silver river. A cozy cave entrance sits behind the cliff top with warm light glowing from inside.",
+      "The Practice Meadow": "A gentle, sloping meadow near the cliff base with soft green grass, small mossy rocks of varying heights, shallow puddles, and stepping stones. Butterflies flutter among daisies. A safe, welcoming space for learning.",
+      "The Windy Hilltop": "A rounded hilltop covered in tall, swaying grass and dandelion plants. The wind is visible through floating seeds and bending grass. The sky feels very open and vast from this vantage point.",
+      "The Open Sky": "A brilliant blue sky filled with fluffy, cotton-like white clouds. Sunlight streams through gaps in the clouds creating golden rays. A faint rainbow arcs across the distance. The world below is a beautiful patchwork of green and gold."
+    },
+    "visual_style": "Soft, whimsical digital illustration with gentle watercolor textures. Rounded, friendly shapes with warm pastel color palettes. Characters have large expressive eyes and soft edges. Lighting is always warm and glowing, like golden hour. Inspired by modern children's picture books with a cozy, storybook feel."
+  },
+  "scenes": [
+    {
+      "index": 1,
+      "title": "The Cliff of Dreams",
+      "text": "High on a sunny cliff, little Barnaby peeked over the edge and gulped. Way, way down below, the trees looked like tiny broccoli and the river was just a shiny ribbon. All his brothers and sisters could already fly — but Barnaby's wings just felt too small and wobbly.",
+      "description": "A small mint-green dragon with a red scarf peers nervously over the edge of a high, grassy cliff. His big amber eyes are wide with worry, and his tiny wings droop behind him. Below, a lush green valley stretches out with small trees and a winding silver river. The sky is bright blue with puffy white clouds. Warm golden sunlight bathes the scene.",
+      "location": "The High Cliff",
+      "characters": [
+        "Barnaby"
+      ],
+      "mood": "Nervous but hopeful",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 2,
+      "title": "A Tiny Visitor",
+      "text": "\"You look like you need a friend!\" chirped a cheerful voice. Barnaby blinked as a tiny blue bird landed right on his nose. \"I'm Pip! And I bet you can fly — you just need to believe it!\" Barnaby almost laughed. How could such a small bird help a big dragon like him?",
+      "description": "Close-up of Barnaby's face looking cross-eyed at a tiny fluffy sky-blue bird perched on his nose. Pip has his little wings spread wide in a confident pose, orange beak open as if talking. Barnaby has a surprised, slightly amused expression with one eyebrow raised. Soft wildflowers dot the grassy cliff around them. Warm afternoon light.",
+      "location": "The High Cliff",
+      "characters": [
+        "Barnaby",
+        "Pip"
+      ],
+      "mood": "Playful and curious",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 3,
+      "title": "Flap Like Me!",
+      "text": "Pip fluttered into the air and hovered right in front of Barnaby's face. \"Watch! Flap, flap, flap! See? Easy!\" Barnaby flapped his little wings as hard as he could. He wiggled, he wobbled, and he lifted one whole inch off the ground before plopping back down on his bottom with a soft thump.",
+      "description": "Pip hovers mid-air with wings spread wide, looking encouraging. Barnaby sits on his bottom on the grass with his stubby wings flapping awkwardly, a few blades of grass flying up from his plop. His red scarf flutters slightly. Both characters look determined and silly. Bright, cheerful colors with a sunny sky background.",
+      "location": "The High Cliff",
+      "characters": [
+        "Barnaby",
+        "Pip"
+      ],
+      "mood": "Silly and determined",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 4,
+      "title": "One Step at a Time",
+      "text": "\"That was AMAZING!\" cheered Pip, doing a little loop-de-loop. \"Tomorrow, we'll try two inches!\" And so every day, Pip came back. Barnaby hopped from rocks, jumped over puddles, and flapped until his wings tingled. Little by little, he got braver.",
+      "description": "A montage-style scene showing Barnaby hopping off a small mossy rock with his wings spread, Pip flying alongside him cheering. Nearby, there are small puddles and stepping stones showing Barnaby's practice path. Mama Dragon watches from the cave entrance in the background with a warm smile. Golden hour lighting with soft orange and pink hues.",
+      "location": "The Practice Meadow",
+      "characters": [
+        "Barnaby",
+        "Pip",
+        "Mama Dragon"
+      ],
+      "mood": "Warm and encouraging",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 5,
+      "title": "The Wind Whispered",
+      "text": "One breezy morning, Pip tilted his head and said, \"Barnaby, close your eyes. Feel the wind? It wants to carry you.\" Barnaby closed his amber eyes and spread his wings wide. The warm breeze tickled under his wings like gentle, invisible hands lifting him up.",
+      "description": "Barnaby stands on a grassy hilltop with his eyes closed and wings spread wide open, his red scarf blowing in the breeze. Pip hovers nearby, also with eyes closed, looking peaceful. Swirls of golden light and floating dandelion seeds represent the wind visually. The sky is a soft gradient of lavender and peach. A serene, magical atmosphere.",
+      "location": "The Windy Hilltop",
+      "characters": [
+        "Barnaby",
+        "Pip"
+      ],
+      "mood": "Peaceful and magical",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 6,
+      "title": "The Big Leap",
+      "text": "Barnaby opened his eyes, looked at Pip, and smiled the biggest dragon smile. \"Ready?\" asked Pip. \"Ready!\" said Barnaby. And together, the tiny bird and the little dragon leaped off the cliff into the wide, open sky.",
+      "description": "Barnaby and Pip stand side by side at the cliff edge, both looking out at the vast sky with determined, joyful expressions. Barnaby's wings are tensed and ready, his tail lifted. Pip bounces on his tiny feet. The cliff edge has wildflowers, and the vast sky stretches before them in brilliant blue with scattered golden clouds. Dramatic, exciting lighting.",
+      "location": "The High Cliff",
+      "characters": [
+        "Barnaby",
+        "Pip"
+      ],
+      "mood": "Exciting and brave",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 7,
+      "title": "Flying Together",
+      "text": "Barnaby's wings caught the wind, and suddenly — he was FLYING! He soared through the clouds with Pip right beside him, doing loops and spins and dipping through rainbows. \"I'm flying! I'M FLYING!\" Barnaby roared with joy, and his happy fire-breath made sparkly golden trails in the sky.",
+      "description": "Barnaby soars through a bright sky with his wings fully extended, looking majestic and joyful with his mouth open in a happy roar. Tiny golden sparkles trail behind him from his fire-breath. Pip flies right beside Barnaby's head, doing a celebratory loop. Fluffy white clouds surround them, and a faint rainbow arcs in the background. Vibrant, saturated colors with brilliant sunlight.",
+      "location": "The Open Sky",
+      "characters": [
+        "Barnaby",
+        "Pip"
+      ],
+      "mood": "Joyful and triumphant",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 8,
+      "title": "Home Again",
+      "text": "As the sun set, Barnaby landed softly back on the cliff where Mama Dragon was waiting with the warmest hug. Pip nestled into Barnaby's scarf for a cozy rest. \"You were always brave enough to fly,\" whispered Pip. \"You just needed to know someone believed in you.\"",
+      "description": "Barnaby sits on the cliff edge at sunset, curled up contentedly while Mama Dragon wraps her large wings around him in a loving hug. Pip is nestled cozily inside Barnaby's red scarf, eyes half-closed and smiling. The sky is painted in gorgeous sunset colors of orange, pink, and purple. Stars are just beginning to appear. Warm, golden light glows around the characters.",
+      "location": "The High Cliff",
+      "characters": [
+        "Barnaby",
+        "Pip",
+        "Mama Dragon"
+      ],
+      "mood": "Tender and heartwarming",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    }
+  ]
+}

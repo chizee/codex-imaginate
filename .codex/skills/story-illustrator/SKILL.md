@@ -23,7 +23,7 @@ The skill does NOT apply to:
 Images are generated through the **Fal API** using the bundled script [assets/fal_image.py](assets/fal_image.py). One call generates one image:
 
 ```bash
-python .claude/skills/story-illustrator/assets/fal_image.py \
+python .codex/skills/story-illustrator/assets/fal_image.py \
   --model nano-banana-2 --aspect 4:5 \
   --prompt "<full prompt>" \
   --ref <url> --ref <url> \
@@ -36,7 +36,7 @@ It submits to Fal, polls until done, **downloads the image locally**, and prints
 
 **Before anything else**, confirm Fal is reachable:
 ```bash
-python .claude/skills/story-illustrator/assets/fal_image.py --check
+python .codex/skills/story-illustrator/assets/fal_image.py --check
 ```
 If it prints `{"fal_key": false}` (exit 1), stop and tell the user to set `FAL_KEY` (env var, or a `.env` at the repo root — see the README). Don't proceed without it.
 
@@ -78,7 +78,7 @@ If no `scenes.json` exists, ask the user to run `scene-splitter` first.
 
 ### Stage 1: Connect and orient
 
-1. Confirm Fal is reachable: run `python .claude/skills/story-illustrator/assets/fal_image.py --check`. If `fal_key` is false, stop and tell the user to set `FAL_KEY` (env var or `.env` at the repo root). Don't continue without it.
+1. Confirm Fal is reachable: run `python .codex/skills/story-illustrator/assets/fal_image.py --check`. If `fal_key` is false, stop and tell the user to set `FAL_KEY` (env var or `.env` at the repo root). Don't continue without it.
 2. Propose ONE visual style based on the story's tone and audience — don't list five options. For beginner children's stories, a strong default is **"warm, soft watercolor children's-book illustration, gentle rounded shapes, cozy lighting."** The user can override.
 3. **Determine the aspect ratio — HARD GATE, ask; do not pick silently.** If the orchestrator pre-supplied one (look for "Aspect ratio: `4:5`"), use that and skip the prompt. Otherwise ask:
    > "What aspect ratio? Common options: `4:5` portrait (storybook / phone, the default for picture books), `1:1` square, `3:4` portrait (book page), `16:9` widescreen. Pick one."
@@ -105,7 +105,7 @@ Write the bible to `{slug}_bible.md` and pause: "Bible drafted — anything to c
 Generate one reference image per **consistent character** and per **recurring location**, using the references model (`references_model` in the registry — default `nano-banana-2`). Each is a single `fal_image.py` call with **no `--ref`** (references are generated from the prompt alone), saved under `stories/<slug>/<slug>_images/`:
 
 ```bash
-python .claude/skills/story-illustrator/assets/fal_image.py \
+python .codex/skills/story-illustrator/assets/fal_image.py \
   --model nano-banana-2 --aspect <locked> \
   --prompt "<style> <character/location description> <no-text + no-border>" \
   --out stories/<slug>/<slug>_images/ref_pip.png
@@ -161,7 +161,7 @@ For each scene in order:
 4. Assemble the reference URL list per the scene's continuity class, in priority order: **characters first, then location, then previous scene.** Respect the model's **`max_refs`** (nano-banana models cap at **4**; seedream allows more). When a SOFT-cut scene would exceed the cap (3 characters + location + previous = 5), **drop the standalone location ref** — the previous-scene image already carries the location. Use the references' **`url`** values (the Fal CDN URLs) and, for the previous-scene ref, the **`url`** returned for that scene earlier in this run.
 5. Call the backend with this scene's model (from the Stage 4 policy — the smart-mix `model`, or the single chosen model) and the locked aspect ratio:
    ```bash
-   python .claude/skills/story-illustrator/assets/fal_image.py \
+   python .codex/skills/story-illustrator/assets/fal_image.py \
      --model <scene model> --aspect <locked> \
      --prompt "<full prompt>" \
      --ref <char url> --ref <location url> --ref <previous scene url> \

@@ -50,7 +50,7 @@ The slug is derived from the story title or filename: lowercased, hyphenated, AS
    > "What aspect ratio? `4:5` portrait (storybook / phone — the default), `1:1` square, `3:4` book page, or `16:9` widescreen."
    > "Which image model? `nano-banana-2` (fast & cheap, ~$0.08/img), `nano-banana-pro` (best for multi-character, ~$0.15/img), **Smart mix** (pro only for multi-character beats — suggested), or `seedream-4` (cheapest, ~$0.03/img). See `image-models.json`."
    Lock them as `aspect_ratio` and the model choice and pass both to the illustrator at Stage 2. **Ask — do not infer.** Aspect ratio locks into every image; both gates spend money. They pause even under an auto-mode reminder.
-7. **Pre-flight checks:** `stories/` is writable; `FAL_KEY` is resolvable (`python .claude/skills/story-illustrator/assets/fal_image.py --check` — re-checked at Stage 2); the ElevenLabs MCP is connected (re-checked at Stage 3); and the user has (or will provide) an ElevenLabs `voice_id` for the narrator.
+7. **Pre-flight checks:** `stories/` is writable; `FAL_KEY` is resolvable (`python .codex/skills/story-illustrator/assets/fal_image.py --check` — re-checked at Stage 2); the ElevenLabs MCP is connected (re-checked at Stage 3); and the user has (or will provide) an ElevenLabs `voice_id` for the narrator.
 
 ### Stage 1: Dispatch scene-splitter
 

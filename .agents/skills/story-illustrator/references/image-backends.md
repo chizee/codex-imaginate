@@ -23,7 +23,7 @@ All three are the same primitive — one `fal_image.py` call with different prom
 ## The script
 
 ```bash
-python .claude/skills/story-illustrator/assets/fal_image.py \
+python .codex/skills/story-illustrator/assets/fal_image.py \
   --model <key from image-models.json> \
   --aspect 4:5 \
   --prompt "<style> <body> <no-text + no-border>" \

@@ -1,0 +1,100 @@
+{
+  "images": [
+    {
+      "scene_index": 1,
+      "prompt": "Characters: Barnaby: A small, chubby dragon with soft mint-green scales, a pale yellow belly, big round amber eyes, tiny stubby wings that seem too small for his round body, little orange spikes along his back, and a short tail with a heart-shaped tip. He wears a tiny red scarf around his neck., A small mint-green dragon with a red scarf peers nervously over the edge of a high, grassy cliff. His big amber eyes are wide with worry, and his tiny wings droop behind him. Below, a lush green valley stretches out with small trees and a winding silver river. The sky is bright blue with puffy white clouds. Warm golden sunlight bathes the scene, featuring Barnaby, at The High Cliff, Nervous but hopeful atmosphere, Soft, whimsical digital illustration with gentle watercolor textures. Rounded, friendly shapes with warm pastel color palettes. Characters have large expressive eyes and soft edges. Lighting is always warm and glowing, like golden hour. Inspired by modern children's picture books with a cozy, storybook feel.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/ac/20260722/7a9d0e9f/179902dd-0b91-4359-89d1-d3c7ad6a190a.png?Expires=1785266896&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=aNT5qJh2nBkf5EpjlElHhWLk73Q%3D",
+      "local_path": "stories/barnaby's-first-flight/barnaby's-first-flight_scene_01.png",
+      "seed": 101,
+      "character_name": "Barnaby",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 2,
+      "prompt": "Characters: Barnaby: A small, chubby dragon with soft mint-green scales, a pale yellow belly, big round amber eyes, tiny stubby wings that seem too small for his round body, little orange spikes along his back, and a short tail with a heart-shaped tip. He wears a tiny red scarf around his neck.; Pip: A tiny, fluffy sky-blue bird with a bright orange beak, big sparkly black eyes, rosy cheek patches, and a little tuft of feathers on top of his head that bounces when he moves. He has delicate white-tipped wings., Close-up of Barnaby's face looking cross-eyed at a tiny fluffy sky-blue bird perched on his nose. Pip has his little wings spread wide in a confident pose, orange beak open as if talking. Barnaby has a surprised, slightly amused expression with one eyebrow raised. Soft wildflowers dot the grassy cliff around them. Warm afternoon light, featuring Barnaby, Pip, at The High Cliff, Playful and curious atmosphere, Soft, whimsical digital illustration with gentle watercolor textures. Rounded, friendly shapes with warm pastel color palettes. Characters have large expressive eyes and soft edges. Lighting is always warm and glowing, like golden hour. Inspired by modern children's picture books with a cozy, storybook feel.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/74/20260722/7a9d0e9f/b2187bf6-5049-4ed4-a5a5-a2ba9a734411.png?Expires=1785266942&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=%2BKqCYBun4G3BJiCbHEni19wui3U%3D",
+      "local_path": "stories/barnaby's-first-flight/barnaby's-first-flight_scene_02.png",
+      "seed": 102,
+      "character_name": "Barnaby, Pip",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 3,
+      "prompt": "Characters: Barnaby: A small, chubby dragon with soft mint-green scales, a pale yellow belly, big round amber eyes, tiny stubby wings that seem too small for his round body, little orange spikes along his back, and a short tail with a heart-shaped tip. He wears a tiny red scarf around his neck.; Pip: A tiny, fluffy sky-blue bird with a bright orange beak, big sparkly black eyes, rosy cheek patches, and a little tuft of feathers on top of his head that bounces when he moves. He has delicate white-tipped wings., Pip hovers mid-air with wings spread wide, looking encouraging. Barnaby sits on his bottom on the grass with his stubby wings flapping awkwardly, a few blades of grass flying up from his plop. His red scarf flutters slightly. Both characters look determined and silly. Bright, cheerful colors with a sunny sky background, featuring Barnaby, Pip, at The High Cliff, Silly and determined atmosphere, Soft, whimsical digital illustration with gentle watercolor textures. Rounded, friendly shapes with warm pastel color palettes. Characters have large expressive eyes and soft edges. Lighting is always warm and glowing, like golden hour. Inspired by modern children's picture books with a cozy, storybook feel.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/0c/20260722/7a9d0e9f/c962f1a0-5d7d-4716-b648-a87a8f791d1c.png?Expires=1785266956&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=U0VqZ5PghN7CTxY5rOGipWZ%2FDoU%3D",
+      "local_path": "stories/barnaby's-first-flight/barnaby's-first-flight_scene_03.png",
+      "seed": 103,
+      "character_name": "Barnaby, Pip",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 4,
+      "prompt": "Characters: Barnaby: A small, chubby dragon with soft mint-green scales, a pale yellow belly, big round amber eyes, tiny stubby wings that seem too small for his round body, little orange spikes along his back, and a short tail with a heart-shaped tip. He wears a tiny red scarf around his neck.; Pip: A tiny, fluffy sky-blue bird with a bright orange beak, big sparkly black eyes, rosy cheek patches, and a little tuft of feathers on top of his head that bounces when he moves. He has delicate white-tipped wings.; Mama Dragon: A large, graceful dragon with deep emerald-green scales, warm golden eyes, long elegant wings, and a gentle smile. She wears a necklace of smooth river stones., A montage-style scene showing Barnaby hopping off a small mossy rock with his wings spread, Pip flying alongside him cheering. Nearby, there are small puddles and stepping stones showing Barnaby's practice path. Mama Dragon watches from the cave entrance in the background with a warm smile. Golden hour lighting with soft orange and pink hues, featuring Barnaby, Pip, Mama Dragon, at The Practice Meadow, Warm and encouraging atmosphere, Soft, whimsical digital illustration with gentle watercolor textures. Rounded, friendly shapes with warm pastel color palettes. Characters have large expressive eyes and soft edges. Lighting is always warm and glowing, like golden hour. Inspired by modern children's picture books with a cozy, storybook feel.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/19/20260722/7a9d0e9f/4387124b-d0dc-40cd-a619-beb3bdcf321c.png?Expires=1785267003&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=ELwwUTvClCDN%2FzdJOKZrsxlZBwc%3D",
+      "local_path": "stories/barnaby's-first-flight/barnaby's-first-flight_scene_04.png",
+      "seed": 104,
+      "character_name": "Barnaby, Pip, Mama Dragon",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 5,
+      "prompt": "Characters: Barnaby: A small, chubby dragon with soft mint-green scales, a pale yellow belly, big round amber eyes, tiny stubby wings that seem too small for his round body, little orange spikes along his back, and a short tail with a heart-shaped tip. He wears a tiny red scarf around his neck.; Pip: A tiny, fluffy sky-blue bird with a bright orange beak, big sparkly black eyes, rosy cheek patches, and a little tuft of feathers on top of his head that bounces when he moves. He has delicate white-tipped wings., Barnaby stands on a grassy hilltop with his eyes closed and wings spread wide open, his red scarf blowing in the breeze. Pip hovers nearby, also with eyes closed, looking peaceful. Swirls of golden light and floating dandelion seeds represent the wind visually. The sky is a soft gradient of lavender and peach. A serene, magical atmosphere, featuring Barnaby, Pip, at The Windy Hilltop, Peaceful and magical atmosphere, Soft, whimsical digital illustration with gentle watercolor textures. Rounded, friendly shapes with warm pastel color palettes. Characters have large expressive eyes and soft edges. Lighting is always warm and glowing, like golden hour. Inspired by modern children's picture books with a cozy, storybook feel.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/29/20260722/7a9d0e9f/d0888a74-b317-4996-bb13-888325155f84.png?Expires=1785267017&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=NqRmcegfpnkjp%2FxEHuh7oVmParY%3D",
+      "local_path": "stories/barnaby's-first-flight/barnaby's-first-flight_scene_05.png",
+      "seed": 105,
+      "character_name": "Barnaby, Pip",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 6,
+      "prompt": "Characters: Barnaby: A small, chubby dragon with soft mint-green scales, a pale yellow belly, big round amber eyes, tiny stubby wings that seem too small for his round body, little orange spikes along his back, and a short tail with a heart-shaped tip. He wears a tiny red scarf around his neck.; Pip: A tiny, fluffy sky-blue bird with a bright orange beak, big sparkly black eyes, rosy cheek patches, and a little tuft of feathers on top of his head that bounces when he moves. He has delicate white-tipped wings., Barnaby and Pip stand side by side at the cliff edge, both looking out at the vast sky with determined, joyful expressions. Barnaby's wings are tensed and ready, his tail lifted. Pip bounces on his tiny feet. The cliff edge has wildflowers, and the vast sky stretches before them in brilliant blue with scattered golden clouds. Dramatic, exciting lighting, featuring Barnaby, Pip, at The High Cliff, Exciting and brave atmosphere, Soft, whimsical digital illustration with gentle watercolor textures. Rounded, friendly shapes with warm pastel color palettes. Characters have large expressive eyes and soft edges. Lighting is always warm and glowing, like golden hour. Inspired by modern children's picture books with a cozy, storybook feel.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/dc/20260722/7a9d0e9f/30acc654-a896-43da-ad8e-3967878ec5a9.png?Expires=1785267061&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=9rQrGmdf4dlHwyED6%2FCpNsb841Q%3D",
+      "local_path": "stories/barnaby's-first-flight/barnaby's-first-flight_scene_06.png",
+      "seed": 106,
+      "character_name": "Barnaby, Pip",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 7,
+      "prompt": "Characters: Barnaby: A small, chubby dragon with soft mint-green scales, a pale yellow belly, big round amber eyes, tiny stubby wings that seem too small for his round body, little orange spikes along his back, and a short tail with a heart-shaped tip. He wears a tiny red scarf around his neck.; Pip: A tiny, fluffy sky-blue bird with a bright orange beak, big sparkly black eyes, rosy cheek patches, and a little tuft of feathers on top of his head that bounces when he moves. He has delicate white-tipped wings., Barnaby soars through a bright sky with his wings fully extended, looking majestic and joyful with his mouth open in a happy roar. Tiny golden sparkles trail behind him from his fire-breath. Pip flies right beside Barnaby's head, doing a celebratory loop. Fluffy white clouds surround them, and a faint rainbow arcs in the background. Vibrant, saturated colors with brilliant sunlight, featuring Barnaby, Pip, at The Open Sky, Joyful and triumphant atmosphere, Soft, whimsical digital illustration with gentle watercolor textures. Rounded, friendly shapes with warm pastel color palettes. Characters have large expressive eyes and soft edges. Lighting is always warm and glowing, like golden hour. Inspired by modern children's picture books with a cozy, storybook feel.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/7d/20260722/7a9d0e9f/e487e885-a240-468d-a23e-6659633deb15.png?Expires=1785267075&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=RqUZjjlc6NACsg7Ar8kS5ZZovb4%3D",
+      "local_path": "stories/barnaby's-first-flight/barnaby's-first-flight_scene_07.png",
+      "seed": 107,
+      "character_name": "Barnaby, Pip",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 8,
+      "prompt": "Characters: Barnaby: A small, chubby dragon with soft mint-green scales, a pale yellow belly, big round amber eyes, tiny stubby wings that seem too small for his round body, little orange spikes along his back, and a short tail with a heart-shaped tip. He wears a tiny red scarf around his neck.; Pip: A tiny, fluffy sky-blue bird with a bright orange beak, big sparkly black eyes, rosy cheek patches, and a little tuft of feathers on top of his head that bounces when he moves. He has delicate white-tipped wings.; Mama Dragon: A large, graceful dragon with deep emerald-green scales, warm golden eyes, long elegant wings, and a gentle smile. She wears a necklace of smooth river stones., Barnaby sits on the cliff edge at sunset, curled up contentedly while Mama Dragon wraps her large wings around him in a loving hug. Pip is nestled cozily inside Barnaby's red scarf, eyes half-closed and smiling. The sky is painted in gorgeous sunset colors of orange, pink, and purple. Stars are just beginning to appear. Warm, golden light glows around the characters, featuring Barnaby, Pip, Mama Dragon, at The High Cliff, Tender and heartwarming atmosphere, Soft, whimsical digital illustration with gentle watercolor textures. Rounded, friendly shapes with warm pastel color palettes. Characters have large expressive eyes and soft edges. Lighting is always warm and glowing, like golden hour. Inspired by modern children's picture books with a cozy, storybook feel.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/c7/20260722/7a9d0e9f/3e2ad42b-90ed-40d9-93bc-ceaa97a4630b.png?Expires=1785267120&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=aFejm3yRJTrAvbL78%2B9OoYAT4L8%3D",
+      "local_path": "stories/barnaby's-first-flight/barnaby's-first-flight_scene_08.png",
+      "seed": 108,
+      "character_name": "Barnaby, Pip, Mama Dragon",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}

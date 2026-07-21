@@ -1,0 +1,9 @@
+.git
+.gitignore
+.gitattributes
+__pycache__/
+*.pyc
+.env*
+README.md
+docs/
+alibaba_deploy/

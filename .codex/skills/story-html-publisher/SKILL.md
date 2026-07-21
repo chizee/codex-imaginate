@@ -44,7 +44,7 @@ Everything pairs by **scene index**: `scenes[i].index = N` → image from `image
 Run the build script (preferred):
 
 ```bash
-python .claude/skills/story-html-publisher/assets/build_html.py {slug}
+python .codex/skills/story-html-publisher/assets/build_html.py {slug}
 ```
 
 It downloads/reads every image and audio file, embeds them as data URIs, injects them into [assets/player-template.html](assets/player-template.html), and writes `stories/{slug}/{slug}_story.json` + `stories/{slug}/{slug}.html`. Read [references/build-html.md](references/build-html.md) for what it does, options, and how to do it by hand if the script can't run.

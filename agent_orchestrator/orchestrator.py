@@ -187,7 +187,7 @@ def run_pipeline(
 
     # ---- Phase 6: Export ----
     if state.phases[Phase.EXPORT.value].status != "done":
-        _print_phase("EXPORT", "Building HTML storybook")
+        _print_phase("EXPORT", "Building storybook exports (HTML, PDF, EPUB)")
         state.mark_running(Phase.EXPORT)
         state.save(story_dir)
 
@@ -199,6 +199,11 @@ def run_pipeline(
 
             images_registry = ImageRegistry.load(story_dir, slug)
             html_path = export_html(story=story, images_registry=images_registry)
+
+            # Also generate PDF and EPUB exports
+            from export_pipeline.export_manager import export_all
+            export_all(story=story, images_registry=images_registry, output_dir=story_dir)
+
             state.mark_done(Phase.EXPORT)
             state.save(story_dir)
             _print_phase("EXPORT", f"Done -> {html_path}")

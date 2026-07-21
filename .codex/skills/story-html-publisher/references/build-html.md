@@ -26,7 +26,7 @@ Everything pairs by **scene index**. `scenes[i].index == N` ⇒ image is `images
 
 ```bash
 # from the repo root
-python .claude/skills/story-html-publisher/assets/build_html.py <slug>
+python .codex/skills/story-html-publisher/assets/build_html.py <slug>
 ```
 
 Options:

@@ -69,15 +69,18 @@ def generate_narration(
         payload = {
             "model": "qwen3-tts-instruct-flash",
             "input": {
-                "text": text,
-                "voice": voice,
-                "language_type": "English",
                 "messages": [
-                    {"role": "user", "content": [{"type": "text", "text": "Read this story text aloud with expression."}]}
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": text}
+                        ],
+                    }
                 ],
             },
             "parameters": {
                 "format": "wav",
+                "voice": voice or "Ethan",
             },
         }
 
@@ -85,7 +88,18 @@ def generate_narration(
             resp = requests.post(_TTS_URL, headers=headers, json=payload, timeout=120)
             resp.raise_for_status()
             data = resp.json()
-            audio_url = data.get("output", {}).get("audio", {}).get("url", "")
+
+            # Extract audio URL from response
+            audio_url = ""
+            choices = data.get("output", {}).get("choices", [])
+            for choice in choices:
+                msg = choice.get("message", {})
+                for item in msg.get("content", []):
+                    if "audio" in item:
+                        audio_url = item["audio"]
+                        break
+                if audio_url:
+                    break
 
             if not audio_url:
                 logger.error("No audio URL in response for scene %d", scene.index)

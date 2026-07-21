@@ -1,0 +1,38 @@
+{
+  "slug": "barnaby's-first-flight",
+  "prompt": "A young dragon learns to fly with a tiny bird",
+  "age_group": "kids",
+  "output_dir": "stories/barnaby's-first-flight",
+  "phases": {
+    "script": {
+      "phase": "script",
+      "status": "done",
+      "error": null
+    },
+    "character_refs": {
+      "phase": "character_refs",
+      "status": "done",
+      "error": null
+    },
+    "scene_images": {
+      "phase": "scene_images",
+      "status": "done",
+      "error": null
+    },
+    "narration": {
+      "phase": "narration",
+      "status": "done",
+      "error": null
+    },
+    "video": {
+      "phase": "video",
+      "status": "done",
+      "error": null
+    },
+    "export": {
+      "phase": "export",
+      "status": "done",
+      "error": null
+    }
+  }
+}
