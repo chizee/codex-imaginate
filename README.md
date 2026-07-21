@@ -106,6 +106,27 @@ imaginate-ai/
 
 ---
 
+## 🧠 Built with Codex & GPT‑5.6
+
+This project was developed for the **OpenAI Build Week Hackathon** using:
+
+| Tool | Role |
+|------|------|
+| **Codex CLI** | Initial project scaffolding, FastAPI backend setup, image generation pipeline orchestration, Docker deployment configuration, and API client code |
+| **GPT‑5.6** | Story script prompts optimization, export pipeline debugging (PDF/EPUB), TTS API payload refinement, and code review |
+| **Codex Session ID** | *(add your session ID from `/feedback`)* |
+
+### How Codex Accelerated Development
+
+1. **Rapid prototyping** — Codex generated the initial FastAPI router, Qwen API integration, and the orchestrator pipeline skeleton from natural language descriptions, cutting setup time from hours to minutes.
+2. **Iterative debugging** — During TTS integration, Codex helped diagnose API 400 errors by analyzing the payload format and comparing it against the Qwen Cloud documentation, leading to a fix that would have taken manual trial and error.
+3. **Deployment automation** — Codex scaffolded the Dockerfile, docker-compose, and deployment configuration that runs the app on this VPS behind Caddy reverse proxy.
+4. **Export pipeline** — Codex wrote the initial weasyprint PDF converter and ebooklib EPUB exporter, then GPT-5.6 optimized the page layouts and styling for proper print formatting.
+
+The combination of Codex's rapid code generation and GPT-5.6's reasoning capabilities meant the entire project went from concept to a working deployed product in a single weekend.
+
+---
+
 ## 📋 Submission Checklist
 
 - ✅ Public GitHub repo with MIT license
