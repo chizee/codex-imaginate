@@ -46,6 +46,13 @@ frontend_dir = os.path.join(os.path.dirname(__file__), "..", "frontend")
 if os.path.isdir(frontend_dir):
     app.mount("/static", StaticFiles(directory=frontend_dir, html=True), name="frontend")
 
+# Serve generated stories (images, audio, HTML, PDF, EPUB)
+stories_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "stories")
+if not os.path.isdir(stories_dir):
+    stories_dir = os.path.join(os.getcwd(), "stories")
+if os.path.isdir(stories_dir):
+    app.mount("/stories", StaticFiles(directory=stories_dir), name="stories")
+
 @app.get("/")
 async def serve_landing():
     from fastapi.responses import HTMLResponse
