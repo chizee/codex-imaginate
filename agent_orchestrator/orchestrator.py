@@ -10,6 +10,7 @@ from shared.models.story import Story
 from script_generator.script_generator import generate_story
 from image_generation.qwen_image_client import generate_references, generate_scene_images
 from narration.cosyvoice_client import generate_narration
+from narration.tts_manager import generate_narration_with_voice
 from export_pipeline.html_exporter import export_html
 from image_generation.image_registry import ImageRegistry
 
@@ -19,6 +20,7 @@ logger = logging.getLogger(__name__)
 def run_pipeline(
     prompt: str,
     age_group: str = "kids",
+    voice: str = "ethan",
     output_base: str = "stories",
     resume: bool = True,
 ) -> str:
@@ -27,6 +29,7 @@ def run_pipeline(
     Args:
         prompt: User's story idea.
         age_group: "kids" or "adult".
+        voice: Narration voice ("ethan", "serena", or "cherry").
         output_base: Base directory for story outputs.
         resume: Whether to check for existing state and resume.
 
@@ -167,7 +170,7 @@ def run_pipeline(
                 story_path = os.path.join(story_dir, f"{slug}_story.json")
                 with open(story_path) as f:
                     story = Story.from_json(f.read())
-            generate_narration(story=story)
+            generate_narration_with_voice(story=story, voice_id=voice)
             state.mark_done(Phase.NARRATION)
             state.save(story_dir)
             _print_phase("NARRATION", "Narration done")

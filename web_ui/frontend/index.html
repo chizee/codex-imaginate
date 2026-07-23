@@ -27,7 +27,17 @@
   /* Nav */
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; max-width: 1400px; margin: 0 auto; }
   .nav-logo { font-weight: 700; font-size: 1.2em; letter-spacing: -0.02em; display: flex; align-items: center; gap: 8px; }
-  .nav-logo span { color: var(--amber); }
+  .nav-logo {
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 180ms cubic-bezier(0.25, 1, 0.5, 1), color 180ms ease;
+}
+.nav-logo:hover { color: var(--amber-light); transform: translateY(-1px); }
+.nav-logo:focus-visible {
+  outline: 2px solid var(--amber-light);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
   .nav-links { display: flex; gap: 24px; align-items: center; }
   .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--text); }
@@ -57,14 +67,35 @@
   /* Progress */
   .progress-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 100; align-items: center; justify-content: center; }
   .progress-overlay.active { display: flex; }
-  .progress-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; max-width: 500px; width: 90%; }
-  .progress-card h3 { font-size: 1.3em; margin-bottom: 24px; }
-  .progress-steps { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
-  .progress-step { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 8px; background: rgba(255,255,255,0.03); font-size: 14px; }
-  .progress-step .icon { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; border: 2px solid var(--border); color: var(--text-secondary); }
-  .progress-step.done .icon { background: #4caf50; border-color: #4caf50; color: white; }
-  .progress-step.active .icon { border-color: var(--amber); color: var(--amber); animation: pulse 1.5s infinite; }
-  .progress-log { background: #000; border-radius: 8px; padding: 14px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #888; max-height: 150px; overflow-y: auto; }
+  .progress-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; max-width: 420px; width: 90%; text-align: center; position: relative; }
+  .progress-card h3 { font-size: 1.2em; margin-bottom: 8px; }
+  .progress-visual { position: relative; width: 100px; height: 100px; margin: 0 auto 24px; }
+  .book-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(-2deg); font-size: 2.4em; animation: book-breathe 2.8s ease-in-out infinite; z-index: 2; }
+  .orbit-ring { position: absolute; top: 50%; left: 50%; border-radius: 50%; border: 1.5px solid rgba(196,122,26,0.25); animation: orbit 4s linear infinite; }
+  .orbit-ring-outer { width: 100px; height: 100px; margin: -50px; }
+  .orbit-ring-inner { width: 64px; height: 64px; margin: -32px; animation-direction: reverse; animation-duration: 3s; }
+  .sparkle { position: absolute; font-size: 10px; color: var(--amber-light); animation: sparkle 2s ease-in-out infinite; z-index: 1; }
+  .sparkle.s1 { top: 0; left: 50%; animation-delay: 0s; }
+  .sparkle.s2 { top: 50%; right: 0; animation-delay: 0.7s; }
+  .sparkle.s3 { bottom: 0; left: 50%; animation-delay: 1.4s; }
+  .progress-eta { font-size: 13px; color: var(--text-secondary); margin-bottom: 4px; }
+  .progress-timer { font-size: 1.6em; font-weight: 600; color: var(--amber-light); margin: 8px 0; font-variant-numeric: tabular-nums; }
+  .phase-label { font-size: 14px; color: var(--text-secondary); margin: 4px 0 16px; min-height: 1.4em; }
+  .phase-markers { display: flex; justify-content: center; gap: 20px; margin-bottom: 16px; }
+  .phase-marker { display: flex; flex-direction: column; align-items: center; gap: 4px; opacity: 0.4; transition: opacity 0.3s; }
+  .phase-marker.active { opacity: 1; }
+  .phase-marker.done { opacity: 0.7; }
+  .phase-marker.done .pm-dot { background: #4caf50; border-color: #4caf50; }
+  .phase-marker.active .pm-dot { border-color: var(--amber); box-shadow: 0 0 6px rgba(196,122,26,0.5); }
+  .pm-dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--border); transition: all 0.3s; }
+  .phase-marker span { font-size: 10px; color: var(--text-secondary); }
+  .progress-note { font-size: 11px; color: #555; }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+  @keyframes book-breathe { 0%,100% { transform: translate(-50%,-50%) rotate(-2deg); } 50% { transform: translate(-50%,-56%) rotate(2deg); } }
+  @keyframes sparkle { 0%,100% { opacity: 0.25; transform: scale(0.72); } 50% { opacity: 1; transform: scale(1.18); } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
 
   /* Section */
   .section { max-width: 1400px; margin: 0 auto; padding: 0 24px 60px; }
@@ -106,7 +137,7 @@
 
 <!-- Nav -->
 <nav class="nav">
-  <div class="nav-logo">✦ <span>Imaginate</span> AI</div>
+  <a class="nav-logo" href="/" aria-label="Return to the Imaginate landing page">✦ <span>Imaginate</span> AI</a>
   <div class="nav-links">
     <a href="#" onclick="document.getElementById('story-view').classList.remove('active'); return false">Stories</a>
     <a href="#">GitHub</a>
@@ -115,7 +146,7 @@
 
 <!-- Hero -->
 <div class="hero">
-  <div class="hero-badge">✦ Powered by Qwen 3.7 • AI Showrunner Track</div>
+  <div class="hero-badge">✦ Powered by Qwen Cloud •</div>
   <h1>Turn your imagination into <span>illustrated storybooks</span></h1>
   <p>One prompt → full script, character-consistent illustrations, narration audio, and multi-format exports. Built entirely on Qwen Cloud.</p>
 </div>
@@ -138,15 +169,26 @@
 <!-- Progress Modal -->
 <div class="progress-overlay" id="progress-overlay">
   <div class="progress-card">
-    <h3>Crafting your storybook ✦</h3>
-    <div class="progress-steps" id="progress-steps">
-      <div class="progress-step" data-phase="SCRIPT"><div class="icon">1</div> Writing script & characters</div>
-      <div class="progress-step" data-phase="CHARACTER_REFS"><div class="icon">2</div> Designing character references</div>
-      <div class="progress-step" data-phase="SCENE_IMAGES"><div class="icon">3</div> Illustrating scenes</div>
-      <div class="progress-step" data-phase="NARRATION"><div class="icon">4</div> Recording narration</div>
-      <div class="progress-step" data-phase="EXPORT"><div class="icon">5</div> Building storybook</div>
+    <div class="progress-visual" aria-hidden="true">
+      <div class="book-icon">📖</div>
+      <div class="orbit-ring orbit-ring-outer"></div>
+      <div class="orbit-ring orbit-ring-inner"></div>
+      <div class="sparkle s1">✦</div>
+      <div class="sparkle s2">✦</div>
+      <div class="sparkle s3">✦</div>
     </div>
-    <div class="progress-log" id="progress-log"></div>
+    <h3>Crafting your storybook</h3>
+    <div class="progress-eta">Typical time: <strong>5–10 minutes</strong></div>
+    <div class="progress-timer">⏱ <span id="elapsed">0m 0s</span></div>
+    <div class="phase-label" id="phase-label">Writing story & characters…</div>
+    <div class="phase-markers">
+      <div class="phase-marker active" data-phase="0"><div class="pm-dot"></div><span>Story</span></div>
+      <div class="phase-marker" data-phase="1"><div class="pm-dot"></div><span>Guides</span></div>
+      <div class="phase-marker" data-phase="2"><div class="pm-dot"></div><span>Illustrations</span></div>
+      <div class="phase-marker" data-phase="3"><div class="pm-dot"></div><span>Narration</span></div>
+      <div class="phase-marker" data-phase="4"><div class="pm-dot"></div><span>Export</span></div>
+    </div>
+    <div class="progress-note">Timeline is estimated. Stories with more scenes take longer.</div>
   </div>
 </div>
 
@@ -179,27 +221,55 @@
 <script>
 const API = window.location.origin;
 let allStories = [];
+let generationTimer = null;
+
+/* Normalize Windows (\\\\) and POSIX (/) paths */
+function filenameFromPath(path) {
+  return (path || '').replace(/\\\\/g, '/').split('/').pop();
+}
 
 async function generateStory() {
   const prompt = document.getElementById('prompt-input').value.trim();
   if (!prompt) { alert('Enter a story prompt!'); return; }
 
-  document.getElementById('generate-btn').disabled = true;
-  document.getElementById('generate-btn').textContent = '✦ Generating...';
+  const btn = document.getElementById('generate-btn');
+  btn.disabled = true;
+  btn.textContent = '✦ Generating...';
   document.getElementById('progress-overlay').classList.add('active');
-  document.getElementById('progress-log').textContent = '';
-  document.querySelectorAll('.progress-step').forEach(s => { s.classList.remove('done', 'active'); });
+
+  const elapsed = document.getElementById('elapsed');
+  const phaseLabel = document.getElementById('phase-label');
+  const phaseSteps = document.querySelectorAll('.phase-marker');
+  function formatElapsed(sec) {
+    const m = Math.floor(sec / 60), s = sec % 60;
+    return m + 'm ' + s + 's';
+  }
+  function setPhase(idx) {
+    phaseSteps.forEach((s, i) => {
+      s.classList.toggle('done', i < idx);
+      s.classList.toggle('active', i === idx);
+    });
+    const labels = ['Writing story & characters…', 'Creating character guides…', 'Illustrating scenes…', 'Recording narration…', 'Binding your storybook…'];
+    phaseLabel.textContent = labels[Math.min(idx, labels.length - 1)];
+  }
+  const startedAt = Date.now();
+  const generationPlan = [
+    { after: 0, status: 'Writing story & characters…' },
+    { after: 35, status: 'Creating character guides…' },
+    { after: 90, status: 'Illustrating each scene…' },
+    { after: 330, status: 'Recording the narration…' },
+    { after: 510, status: 'Binding your storybook…' },
+  ];
+  function updateTimer() {
+    const seconds = Math.floor((Date.now() - startedAt) / 1000);
+    elapsed.textContent = formatElapsed(seconds);
+    const phaseIdx = generationPlan.reduce((cur, ph, i) => seconds >= ph.after ? i : cur, 0);
+    setPhase(phaseIdx);
+  }
+  generationTimer = setInterval(updateTimer, 1000);
+  updateTimer();
 
   try {
-    // Mark each step as done as the pipeline progresses (simulated tick)
-    const stepNames = ['SCRIPT', 'CHARACTER_REFS', 'SCENE_IMAGES', 'NARRATION', 'EXPORT'];
-    const tick = setInterval(() => {
-      const active = document.querySelector('.progress-step.active');
-      if (active) { active.classList.remove('active'); active.classList.add('done'); }
-      const next = document.querySelector('.progress-step:not(.done):not(.active)');
-      if (next) next.classList.add('active');
-    }, 3000);
-
     const resp = await fetch(API + '/api/pipeline', {
       method: 'POST', headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -207,21 +277,22 @@ async function generateStory() {
         voice: document.getElementById('voice-select').value,
       })
     });
-    clearInterval(tick);
     const data = await resp.json();
     if (!resp.ok) throw new Error(data.detail || 'Pipeline failed');
 
-    document.querySelectorAll('.progress-step').forEach(s => { s.classList.add('done'); s.classList.remove('active'); });
-    document.getElementById('progress-log').textContent += '\n✓ Storybook ready!';
-    setTimeout(() => document.getElementById('progress-overlay').classList.remove('active'), 1000);
+    setPhase(5);
+    document.querySelectorAll('.phase-marker').forEach(s => { s.classList.add('done'); s.classList.remove('active'); });
+    setTimeout(() => document.getElementById('progress-overlay').classList.remove('active'), 800);
     await loadStories();
     viewStory(data.slug);
   } catch (e) {
-    document.getElementById('progress-log').textContent += '\n✗ Error: ' + e.message;
-    setTimeout(() => document.getElementById('progress-overlay').classList.remove('active'), 2000);
+    document.getElementById('progress-overlay').classList.remove('active');
+    alert('Error: ' + e.message);
+  } finally {
+    clearInterval(generationTimer);
+    btn.disabled = false;
+    btn.textContent = '✦ Generate';
   }
-  document.getElementById('generate-btn').disabled = false;
-  document.getElementById('generate-btn').textContent = '✦ Generate';
 }
 
 function fillPrompt(el) { document.getElementById('prompt-input').value = el.textContent; }
@@ -236,7 +307,7 @@ async function loadStories() {
     if (allStories.length === 0) { grid.appendChild(empty); return; }
     for (const s of allStories) {
       const card = document.createElement('div'); card.className = 'story-card';
-      card.innerHTML = `<h3>${s.title}</h3><div class="meta">${s.scenes || 0} scenes</div>`;
+      card.innerHTML = '<h3>' + s.title + '</h3><div class="meta">' + (s.scenes || 0) + ' scenes</div>';
       card.onclick = () => viewStory(s.slug);
       grid.appendChild(card);
     }
@@ -264,24 +335,48 @@ async function viewStory(slug) {
 
     const content = document.getElementById('story-content');
     content.innerHTML = '';
+    const audioManifest = data.audio?.files || {};
+
     for (const scene of (story.scenes || [])) {
       const img = (data.images?.images || []).find(i => i.scene_index === scene.index);
-      const src = img?.local_path ? 'stories/' + slug + '/' + img.local_path.split('/').pop() : '';
-      const audioSrc = 'stories/' + slug + '/' + slug + '_audio/' + slug + '_part_' + String(scene.index).padStart(2, '0') + '.mp3';
+      const imgFilename = filenameFromPath(img?.local_path);
+      const imgSrc = imgFilename ? API + '/stories/' + encodeURIComponent(slug) + '/' + encodeURIComponent(imgFilename) : '';
+
+      const audioFilename = filenameFromPath(audioManifest[String(scene.index)]);
+      const audioSrc = audioFilename ? API + '/stories/' + encodeURIComponent(slug) + '/' + encodeURIComponent(slug) + '_audio/' + encodeURIComponent(audioFilename) : '';
 
       const div = document.createElement('div');
-      div.style.marginBottom = '32px';
-      div.style.background = 'var(--surface)';
-      div.style.borderRadius = 'var(--radius)';
-      div.style.padding = '20px';
-      div.style.border = '1px solid var(--border)';
+      div.style.cssText = 'margin-bottom:32px;background:var(--surface);border-radius:var(--radius);padding:20px;border:1px solid var(--border)';
 
-      let html = `<h3 style="color:var(--amber-light);margin-bottom:12px">${scene.title || 'Scene ' + scene.index}</h3>`;
-      if (src) html += `<div class="scene-image-wrapper"><img src="${API}/${src}" alt="Scene ${scene.index}" loading="lazy"></div>`;
-      html += `<div class="scene-text">${scene.text || ''}</div>`;
-      if (audioSrc) html += `<audio controls style="width:100%;margin-top:8px"><source src="${API}/${audioSrc}"></audio>`;
+      const h3 = document.createElement('h3');
+      h3.style.cssText = 'color:var(--amber-light);margin-bottom:12px';
+      h3.textContent = scene.title || 'Scene ' + scene.index;
+      div.appendChild(h3);
 
-      div.innerHTML = html;
+      if (imgSrc) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'scene-image-wrapper';
+        const imgEl = document.createElement('img');
+        imgEl.src = imgSrc;
+        imgEl.alt = 'Scene ' + scene.index;
+        imgEl.loading = 'lazy';
+        wrapper.appendChild(imgEl);
+        div.appendChild(wrapper);
+      }
+
+      const textP = document.createElement('div');
+      textP.className = 'scene-text';
+      textP.textContent = scene.text || '';
+      div.appendChild(textP);
+
+      if (audioSrc) {
+        const audioEl = document.createElement('audio');
+        audioEl.controls = true;
+        audioEl.style.cssText = 'width:100%;margin-top:8px';
+        audioEl.src = audioSrc;
+        div.appendChild(audioEl);
+      }
+
       content.appendChild(div);
     }
   } catch (e) { alert('Failed to load story'); }

@@ -143,7 +143,7 @@ async def get_story(slug: str):
 @app.post("/api/pipeline")
 async def start_pipeline(req: PipelineRequest):
     try:
-        html_path = run_pipeline(prompt=req.prompt, age_group=req.age_group)
+        html_path = run_pipeline(prompt=req.prompt, age_group=req.age_group, voice=req.voice)
         if not html_path or not os.path.exists(html_path):
             raise HTTPException(status_code=500, detail="HTML not found")
         return {"status": "complete", "html_path": html_path, "slug": os.path.basename(os.path.dirname(html_path))}
