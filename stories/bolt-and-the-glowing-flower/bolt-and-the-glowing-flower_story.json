@@ -1,0 +1,173 @@
+{
+  "title": "Bolt and the Glowing Flower",
+  "prompt": "A curious little robot named Bolt discovers a glowing flower in a junkyard and learns that even machines can grow",
+  "age_group": "kids",
+  "bible": {
+    "characters": {
+      "Bolt": {
+        "name": "Bolt",
+        "age": "Young (equivalent to a child)",
+        "role": "protagonist",
+        "appearance": "A small, round robot about the size of a toddler. Rusty copper-colored body with patches of teal paint. Big round blue LED eyes that glow softly. Two stubby arms with three-fingered claw hands. A little antenna on top of his head that wiggles when he's curious. He rolls on two small tank-like treads. Wears a tiny red scarf tied around his neck.",
+        "personality": "Curious, gentle, optimistic, a little shy but brave when it matters",
+        "notes": "Bolt's antenna glows brighter when he feels strong emotions. His eyes change shape to show expressions — circles for surprise, crescents for happiness."
+      },
+      "Pip": {
+        "name": "Pip",
+        "age": "Young (equivalent to a child)",
+        "role": "sidekick",
+        "appearance": "A tiny mechanical bird, about the size of a sparrow. Made of shiny silver metal with golden wing tips. Has a small round head with bright green gem eyes. Her tail feathers are made of thin copper strips that jingle when she flies.",
+        "personality": "Playful, chatty, loyal, a little mischievous",
+        "notes": "Pip communicates in chirps and whistles. She lands on Bolt's antenna when she's excited."
+      },
+      "The Glow Flower": {
+        "name": "The Glow Flower",
+        "age": "Newborn",
+        "role": "symbol/catalyst",
+        "appearance": "A small, delicate flower with five soft petals that glow with a warm golden-pink light. Its stem is a gentle green, and tiny sparkles float around it like fireflies. It grows from a crack between two old metal plates.",
+        "personality": "Gentle, resilient, full of quiet life",
+        "notes": "The flower pulses softly with light, almost like a heartbeat."
+      }
+    },
+    "locations": {
+      "The Junkyard": "A large, open-air junkyard filled with organized piles of old machines, gears, pipes, tires, and mechanical parts. Despite being a junkyard, it has a cozy, treasure-hunt atmosphere with warm sunlight filtering through gaps. Colors are warm rust, copper, teal, and silver. Paths wind between the piles like little streets.",
+      "The Junkyard - Hidden Corner": "A secluded nook between tall stacks of old tires and metal shelves. More shadowed than the rest of the junkyard, creating a private, secret feeling. The ground is packed earth with scattered small parts.",
+      "Bolt's Workshop Corner": "A cozy area Bolt has made his own, with a small workbench made from an old crate, organized piles of interesting finds, and a little sleeping nook. It feels like a child's bedroom made from found objects. Warm and personal.",
+      "The Junkyard - Transformed": "The same junkyard but now covered in glowing golden-pink flowers sprouting from every surface. Vines of light weave through old machines. The atmosphere is magical and alive, like a secret garden made of metal and light. Warm golden hour lighting."
+    },
+    "visual_style": "Soft, warm digital illustration style with rounded shapes and gentle textures. Colors are rich and inviting — warm copper tones, soft golden-pink glows, teal and blue accents. The junkyard is depicted as cozy and colorful rather than grimy. Characters have expressive, appealing designs with smooth lines. Lighting plays a key role, with the Glow Flower's light creating magical atmosphere. Style reminiscent of Pixar concept art meets children's picture book illustration. Slightly painterly with soft edges and visible warmth."
+  },
+  "scenes": [
+    {
+      "index": 1,
+      "title": "A Day in the Junkyard",
+      "text": "In a big, busy junkyard full of rusty gears and old machines, a little robot named Bolt rolled along, looking for interesting things. His blue eyes scanned every pile, and his antenna wiggled with excitement. 'You never know what you might find!' he chirped happily.",
+      "description": "A wide view of a colorful junkyard under a bright blue sky. Bolt, a small copper robot with a red scarf, rolls along a path between tall piles of old gears, pipes, and broken machines. His blue LED eyes glow, and his antenna is perked up. Pip the silver bird flies above him. Warm golden sunlight streams in. The junkyard has a cozy, treasure-hunt feel rather than being gloomy.",
+      "location": "The Junkyard",
+      "characters": [
+        "Bolt",
+        "Pip"
+      ],
+      "mood": "Cheerful and adventurous",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 2,
+      "title": "A Tiny Glow",
+      "text": "Something caught Bolt's eye — a soft, golden glow peeking out from behind a stack of old tires. He rolled closer, his treads crunching softly on the ground. Pip landed on his antenna and tilted her head. Neither of them had ever seen anything like it in the junkyard before.",
+      "description": "Bolt peeks around a stack of gray and brown old tires, his blue eyes wide with surprise. A soft golden-pink glow illuminates his copper face from the other side. Pip sits on his antenna, her green eyes reflecting the glow. The background is shadowy, making the mysterious light stand out. Close-up perspective.",
+      "location": "The Junkyard",
+      "characters": [
+        "Bolt",
+        "Pip"
+      ],
+      "mood": "Mysterious and wondrous",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 3,
+      "title": "The Glow Flower",
+      "text": "There, growing from a tiny crack between two old metal plates, was the most beautiful thing Bolt had ever seen — a little flower, glowing softly like a tiny star. Its golden-pink petals shimmered, and tiny sparkles danced around it. Bolt's eyes turned into happy crescents. 'Hello, little one,' he whispered gently.",
+      "description": "A close-up of the Glow Flower growing from a crack between two rusty metal plates. Its five golden-pink petals emit a warm, soft light. Tiny sparkle particles float around it. Bolt's face is visible in the background, his LED eyes shaped like happy crescents, bathed in the flower's warm glow. His claw hands are held close together near the flower, as if cradling it without touching. Pip watches from a nearby pipe.",
+      "location": "The Junkyard - Hidden Corner",
+      "characters": [
+        "Bolt",
+        "Pip",
+        "The Glow Flower"
+      ],
+      "mood": "Magical and tender",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 4,
+      "title": "Taking Care",
+      "text": "Bolt decided right then that he would take care of this little flower. He found an old tin can and carefully scooped some soft earth around the flower's roots. Pip flew off and came back with tiny drops of water on her copper wings. Together, they made the flower a cozy new home.",
+      "description": "Bolt carefully holds an old tin can with both claw hands, gently scooping dark earth around the base of the Glow Flower inside it. Pip flies nearby, water droplets glistening on her silver wings. Bolt's expression is focused and caring, his antenna glowing softly. The scene is lit by the flower's warm golden-pink light mixed with afternoon sunlight. Scattered tools and a small watering can made from a bottle are visible nearby.",
+      "location": "The Junkyard - Bolt's Workshop Corner",
+      "characters": [
+        "Bolt",
+        "Pip",
+        "The Glow Flower"
+      ],
+      "mood": "Warm and nurturing",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 5,
+      "title": "A Worry in the Night",
+      "text": "That night, the sky turned dark and cold wind blew through the junkyard. Bolt noticed the Glow Flower's light was flickering, growing dimmer and dimmer. His antenna drooped with worry. 'Oh no,' he said softly. 'You need more than a tin can to grow, don't you?'",
+      "description": "A nighttime scene with a dark blue sky and a crescent moon. Bolt sits beside the tin can holding the Glow Flower, whose light is visibly dim and flickering. Bolt's antenna is drooping downward, and his blue eyes are wide circles of worry. Wind blows his red scarf to the side. Pip huddles on a nearby pipe, looking concerned. The junkyard around them is dark and shadowy with cool blue tones.",
+      "location": "The Junkyard - Bolt's Workshop Corner",
+      "characters": [
+        "Bolt",
+        "Pip",
+        "The Glow Flower"
+      ],
+      "mood": "Worried and tender",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 6,
+      "title": "Bolt's Idea",
+      "text": "Bolt had an idea! He remembered that plants need sunlight, good soil, and love. He built a little shelter from shiny metal pieces to block the cold wind, and he used a polished hubcap to catch the morning sun and reflect it onto the flower. 'I may be a machine,' Bolt said, 'but I can still help something grow!'",
+      "description": "Bolt stands proudly next to a creative little shelter he built around the flower — made of shiny metal scraps arranged like a tiny house. A polished silver hubcap is angled above, catching a beam of golden morning sunlight and reflecting it down onto the Glow Flower. The flower's light is brightening again, glowing warmly. Bolt's antenna is perked up and glowing bright. Pip flutters excitedly nearby. The scene transitions from cool night tones on the edges to warm golden light in the center.",
+      "location": "The Junkyard - Bolt's Workshop Corner",
+      "characters": [
+        "Bolt",
+        "Pip",
+        "The Glow Flower"
+      ],
+      "mood": "Hopeful and inventive",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 7,
+      "title": "Growing Together",
+      "text": "Day after day, Bolt tended to the Glow Flower. He watered it, sang little beep-boop songs, and made sure it always had plenty of light. And slowly, wonderfully, the flower grew taller and brighter — and something inside Bolt grew too. It was a warm, happy feeling he'd never felt before.",
+      "description": "A montage-style scene showing the passage of time. The Glow Flower is now taller and more vibrant, with multiple glowing buds on its stem, radiating strong golden-pink light. Bolt sits beside it, his claw hands resting on his lap, his eyes shaped like happy crescents. His antenna glows brightly. Pip perches on one of the flower's leaves. Small butterflies made of light flutter around the flower. The background shows the junkyard corner transformed — small plants and moss have started growing around the shelter.",
+      "location": "The Junkyard - Bolt's Workshop Corner",
+      "characters": [
+        "Bolt",
+        "Pip",
+        "The Glow Flower"
+      ],
+      "mood": "Joyful and heartwarming",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 8,
+      "title": "A Garden of Light",
+      "text": "One morning, Bolt woke to find the Glow Flower had scattered its sparkling seeds all across the junkyard. Tiny glowing sprouts were popping up everywhere — between old gears, on rusty pipes, in forgotten corners. The whole junkyard shimmered with golden light. Bolt's heart buzzed with the happiest feeling a robot could have.",
+      "description": "A breathtaking wide shot of the junkyard transformed. Dozens of small glowing flowers sprout from every crack and corner — on old machines, between pipes, along pathways. The entire scene is bathed in warm golden-pink light from the flowers. Sparkles and light-butterflies fill the air. Bolt stands in the center, arms raised in joy, his antenna glowing like a beacon. Pip soars through the air above him, leaving a trail of light. The junkyard no longer looks like junk — it looks like a magical garden.",
+      "location": "The Junkyard - Transformed",
+      "characters": [
+        "Bolt",
+        "Pip"
+      ],
+      "mood": "Magical and triumphant",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    },
+    {
+      "index": 9,
+      "title": "What Grew Inside",
+      "text": "Bolt looked at his claw hands and smiled. He was made of metal and wires, gears and bolts — but he had grown something beautiful. He had learned that you don't need to be alive in the usual way to have love inside you. Even machines can grow, when they care for something with all their heart.",
+      "description": "A close-up of Bolt looking down at his copper claw hands held open in front of him, a gentle smile on his face with crescent-shaped eyes. A single glowing flower petal rests in his palm, casting warm golden light on his face. His antenna glows softly. Pip rests on his shoulder. In the soft-focus background, the glowing garden shimmers. The lighting is warm and golden, like a sunset. The mood is peaceful and full of quiet wisdom.",
+      "location": "The Junkyard - Transformed",
+      "characters": [
+        "Bolt",
+        "Pip"
+      ],
+      "mood": "Peaceful and wise",
+      "continuity_class": "HARD_CUT",
+      "state_changes": {}
+    }
+  ]
+}

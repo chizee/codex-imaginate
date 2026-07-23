@@ -1,0 +1,88 @@
+{
+  "images": [
+    {
+      "scene_index": 1,
+      "prompt": "Characters: Bolt: A small, round robot about the size of a toddler. Rusty copper-colored body with patches of teal paint. Big round blue LED eyes that glow softly. Two stubby arms with three-fingered claw hands. A little antenna on top of his head that wiggles when he's curious. He rolls on two small tank-like treads. Wears a tiny red scarf tied around his neck.; Pip: A tiny mechanical bird, about the size of a sparrow. Made of shiny silver metal with golden wing tips. Has a small round head with bright green gem eyes. Her tail feathers are made of thin copper strips that jingle when she flies., A wide view of a colorful junkyard under a bright blue sky. Bolt, a small copper robot with a red scarf, rolls along a path between tall piles of old gears, pipes, and broken machines. His blue LED eyes glow, and his antenna is perked up. Pip the silver bird flies above him. Warm golden sunlight streams in. The junkyard has a cozy, treasure-hunt feel rather than being gloomy, featuring Bolt, Pip, at The Junkyard, Cheerful and adventurous atmosphere, Soft, warm digital illustration style with rounded shapes and gentle textures. Colors are rich and inviting — warm copper tones, soft golden-pink glows, teal and blue accents. The junkyard is depicted as cozy and colorful rather than grimy. Characters have expressive, appealing designs with smooth lines. Lighting plays a key role, with the Glow Flower's light creating magical atmosphere. Style reminiscent of Pixar concept art meets children's picture book illustration. Slightly painterly with soft edges and visible warmth.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/32/20260723/7a9d0e9f/1b46e461-bae1-41d8-b06e-ee45c37f6b10.png?Expires=1785403089&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=8baZZ4wLJ7ZvNukgvRaTbSflHe0%3D",
+      "local_path": "stories/bolt-and-the-glowing-flower/bolt-and-the-glowing-flower_scene_01.png",
+      "seed": 101,
+      "character_name": "Bolt, Pip",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 3,
+      "prompt": "Characters: Bolt: A small, round robot about the size of a toddler. Rusty copper-colored body with patches of teal paint. Big round blue LED eyes that glow softly. Two stubby arms with three-fingered claw hands. A little antenna on top of his head that wiggles when he's curious. He rolls on two small tank-like treads. Wears a tiny red scarf tied around his neck.; Pip: A tiny mechanical bird, about the size of a sparrow. Made of shiny silver metal with golden wing tips. Has a small round head with bright green gem eyes. Her tail feathers are made of thin copper strips that jingle when she flies.; The Glow Flower: A small, delicate flower with five soft petals that glow with a warm golden-pink light. Its stem is a gentle green, and tiny sparkles float around it like fireflies. It grows from a crack between two old metal plates., A close-up of the Glow Flower growing from a crack between two rusty metal plates. Its five golden-pink petals emit a warm, soft light. Tiny sparkle particles float around it. Bolt's face is visible in the background, his LED eyes shaped like happy crescents, bathed in the flower's warm glow. His claw hands are held close together near the flower, as if cradling it without touching. Pip watches from a nearby pipe, featuring Bolt, Pip, The Glow Flower, at The Junkyard - Hidden Corner, Magical and tender atmosphere, Soft, warm digital illustration style with rounded shapes and gentle textures. Colors are rich and inviting — warm copper tones, soft golden-pink glows, teal and blue accents. The junkyard is depicted as cozy and colorful rather than grimy. Characters have expressive, appealing designs with smooth lines. Lighting plays a key role, with the Glow Flower's light creating magical atmosphere. Style reminiscent of Pixar concept art meets children's picture book illustration. Slightly painterly with soft edges and visible warmth.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/a9/20260723/7a9d0e9f/a7627abc-9a61-4c49-82f8-896dae078316.png?Expires=1785403133&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=Ighq3QRg3YtSWgJy7i1CsW7wRo4%3D",
+      "local_path": "stories/bolt-and-the-glowing-flower/bolt-and-the-glowing-flower_scene_03.png",
+      "seed": 103,
+      "character_name": "Bolt, Pip, The Glow Flower",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 4,
+      "prompt": "Characters: Bolt: A small, round robot about the size of a toddler. Rusty copper-colored body with patches of teal paint. Big round blue LED eyes that glow softly. Two stubby arms with three-fingered claw hands. A little antenna on top of his head that wiggles when he's curious. He rolls on two small tank-like treads. Wears a tiny red scarf tied around his neck.; Pip: A tiny mechanical bird, about the size of a sparrow. Made of shiny silver metal with golden wing tips. Has a small round head with bright green gem eyes. Her tail feathers are made of thin copper strips that jingle when she flies.; The Glow Flower: A small, delicate flower with five soft petals that glow with a warm golden-pink light. Its stem is a gentle green, and tiny sparkles float around it like fireflies. It grows from a crack between two old metal plates., Bolt carefully holds an old tin can with both claw hands, gently scooping dark earth around the base of the Glow Flower inside it. Pip flies nearby, water droplets glistening on her silver wings. Bolt's expression is focused and caring, his antenna glowing softly. The scene is lit by the flower's warm golden-pink light mixed with afternoon sunlight. Scattered tools and a small watering can made from a bottle are visible nearby, featuring Bolt, Pip, The Glow Flower, setting: The Junkyard - Bolt's Workshop Corner, Warm and nurturing atmosphere, Soft, warm digital illustration style with rounded shapes and gentle textures. Colors are rich and inviting — warm copper tones, soft golden-pink glows, teal and blue accents. The junkyard is depicted as cozy and colorful rather than grimy. Characters have expressive, appealing designs with smooth lines. Lighting plays a key role, with the Glow Flower's light creating magical atmosphere. Style reminiscent of Pixar concept art meets children's picture book illustration. Slightly painterly with soft edges and visible warmth.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/81/20260723/7a9d0e9f/23f09525-cf71-4b25-8698-ee1135a54afd.png?Expires=1785403148&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=PUplbrjpH7MajoOO6TZsZXRTOgw%3D",
+      "local_path": "stories/bolt-and-the-glowing-flower/bolt-and-the-glowing-flower_scene_04.png",
+      "seed": 104,
+      "character_name": "Bolt, Pip, The Glow Flower",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 6,
+      "prompt": "Characters: Bolt: A small, round robot about the size of a toddler. Rusty copper-colored body with patches of teal paint. Big round blue LED eyes that glow softly. Two stubby arms with three-fingered claw hands. A little antenna on top of his head that wiggles when he's curious. He rolls on two small tank-like treads. Wears a tiny red scarf tied around his neck.; Pip: A tiny mechanical bird, about the size of a sparrow. Made of shiny silver metal with golden wing tips. Has a small round head with bright green gem eyes. Her tail feathers are made of thin copper strips that jingle when she flies.; The Glow Flower: A small, delicate flower with five soft petals that glow with a warm golden-pink light. Its stem is a gentle green, and tiny sparkles float around it like fireflies. It grows from a crack between two old metal plates., Bolt stands proudly next to a creative little shelter he built around the flower — made of shiny metal scraps arranged like a tiny house. A polished silver hubcap is angled above, catching a beam of golden morning sunlight and reflecting it down onto the Glow Flower. The flower's light is brightening again, glowing warmly. Bolt's antenna is perked up and glowing bright. Pip flutters excitedly nearby. The scene transitions from cool night tones on the edges to warm golden light in the center, featuring Bolt, Pip, The Glow Flower, setting: The Junkyard - Bolt's Workshop Corner, Hopeful and inventive atmosphere, Soft, warm digital illustration style with rounded shapes and gentle textures. Colors are rich and inviting — warm copper tones, soft golden-pink glows, teal and blue accents. The junkyard is depicted as cozy and colorful rather than grimy. Characters have expressive, appealing designs with smooth lines. Lighting plays a key role, with the Glow Flower's light creating magical atmosphere. Style reminiscent of Pixar concept art meets children's picture book illustration. Slightly painterly with soft edges and visible warmth.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/c5/20260723/7a9d0e9f/80f1595b-8ee8-4fea-a5ee-03b0fa356558.png?Expires=1785403204&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=F44IpwjlbdyvsdO5FJkde9qpGhk%3D",
+      "local_path": "stories/bolt-and-the-glowing-flower/bolt-and-the-glowing-flower_scene_06.png",
+      "seed": 106,
+      "character_name": "Bolt, Pip, The Glow Flower",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 7,
+      "prompt": "Characters: Bolt: A small, round robot about the size of a toddler. Rusty copper-colored body with patches of teal paint. Big round blue LED eyes that glow softly. Two stubby arms with three-fingered claw hands. A little antenna on top of his head that wiggles when he's curious. He rolls on two small tank-like treads. Wears a tiny red scarf tied around his neck.; Pip: A tiny mechanical bird, about the size of a sparrow. Made of shiny silver metal with golden wing tips. Has a small round head with bright green gem eyes. Her tail feathers are made of thin copper strips that jingle when she flies.; The Glow Flower: A small, delicate flower with five soft petals that glow with a warm golden-pink light. Its stem is a gentle green, and tiny sparkles float around it like fireflies. It grows from a crack between two old metal plates., A montage-style scene showing the passage of time. The Glow Flower is now taller and more vibrant, with multiple glowing buds on its stem, radiating strong golden-pink light. Bolt sits beside it, his claw hands resting on his lap, his eyes shaped like happy crescents. His antenna glows brightly. Pip perches on one of the flower's leaves. Small butterflies made of light flutter around the flower. The background shows the junkyard corner transformed — small plants and moss have started growing around the shelter, featuring Bolt, Pip, The Glow Flower, setting: The Junkyard - Bolt's Workshop Corner, Joyful and heartwarming atmosphere, Soft, warm digital illustration style with rounded shapes and gentle textures. Colors are rich and inviting — warm copper tones, soft golden-pink glows, teal and blue accents. The junkyard is depicted as cozy and colorful rather than grimy. Characters have expressive, appealing designs with smooth lines. Lighting plays a key role, with the Glow Flower's light creating magical atmosphere. Style reminiscent of Pixar concept art meets children's picture book illustration. Slightly painterly with soft edges and visible warmth.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/bd/20260723/7a9d0e9f/fd209c75-bd79-4a1c-91f5-4b2a48b6a341.png?Expires=1785403218&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=gjXiRyfjJiqGB4LgDmACBlX21sE%3D",
+      "local_path": "stories/bolt-and-the-glowing-flower/bolt-and-the-glowing-flower_scene_07.png",
+      "seed": 107,
+      "character_name": "Bolt, Pip, The Glow Flower",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 8,
+      "prompt": "Characters: Bolt: A small, round robot about the size of a toddler. Rusty copper-colored body with patches of teal paint. Big round blue LED eyes that glow softly. Two stubby arms with three-fingered claw hands. A little antenna on top of his head that wiggles when he's curious. He rolls on two small tank-like treads. Wears a tiny red scarf tied around his neck.; Pip: A tiny mechanical bird, about the size of a sparrow. Made of shiny silver metal with golden wing tips. Has a small round head with bright green gem eyes. Her tail feathers are made of thin copper strips that jingle when she flies., A breathtaking wide shot of the junkyard transformed. Dozens of small glowing flowers sprout from every crack and corner — on old machines, between pipes, along pathways. The entire scene is bathed in warm golden-pink light from the flowers. Sparkles and light-butterflies fill the air. Bolt stands in the center, arms raised in joy, his antenna glowing like a beacon. Pip soars through the air above him, leaving a trail of light. The junkyard no longer looks like junk — it looks like a magical garden, featuring Bolt, Pip, at The Junkyard - Transformed, Magical and triumphant atmosphere, Soft, warm digital illustration style with rounded shapes and gentle textures. Colors are rich and inviting — warm copper tones, soft golden-pink glows, teal and blue accents. The junkyard is depicted as cozy and colorful rather than grimy. Characters have expressive, appealing designs with smooth lines. Lighting plays a key role, with the Glow Flower's light creating magical atmosphere. Style reminiscent of Pixar concept art meets children's picture book illustration. Slightly painterly with soft edges and visible warmth.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/cb/20260723/7a9d0e9f/06ea7d4e-7cd6-43f5-acca-121cc1e675fc.png?Expires=1785403262&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=xROf70h4AvAL1Cq1p0srDLe25R8%3D",
+      "local_path": "stories/bolt-and-the-glowing-flower/bolt-and-the-glowing-flower_scene_08.png",
+      "seed": 108,
+      "character_name": "Bolt, Pip",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 9,
+      "prompt": "Characters: Bolt: A small, round robot about the size of a toddler. Rusty copper-colored body with patches of teal paint. Big round blue LED eyes that glow softly. Two stubby arms with three-fingered claw hands. A little antenna on top of his head that wiggles when he's curious. He rolls on two small tank-like treads. Wears a tiny red scarf tied around his neck.; Pip: A tiny mechanical bird, about the size of a sparrow. Made of shiny silver metal with golden wing tips. Has a small round head with bright green gem eyes. Her tail feathers are made of thin copper strips that jingle when she flies., A close-up of Bolt looking down at his copper claw hands held open in front of him, a gentle smile on his face with crescent-shaped eyes. A single glowing flower petal rests in his palm, casting warm golden light on his face. His antenna glows softly. Pip rests on his shoulder. In the soft-focus background, the glowing garden shimmers. The lighting is warm and golden, like a sunset. The mood is peaceful and full of quiet wisdom, featuring Bolt, Pip, at The Junkyard - Transformed, Peaceful and wise atmosphere, Soft, warm digital illustration style with rounded shapes and gentle textures. Colors are rich and inviting — warm copper tones, soft golden-pink glows, teal and blue accents. The junkyard is depicted as cozy and colorful rather than grimy. Characters have expressive, appealing designs with smooth lines. Lighting plays a key role, with the Glow Flower's light creating magical atmosphere. Style reminiscent of Pixar concept art meets children's picture book illustration. Slightly painterly with soft edges and visible warmth.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/ff/20260723/7a9d0e9f/a46de4c9-7ede-4265-887f-13d365f44d56.png?Expires=1785403276&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=FaH1VRNz9DwTftj2BGkgp7dK5Yk%3D",
+      "local_path": "stories/bolt-and-the-glowing-flower/bolt-and-the-glowing-flower_scene_09.png",
+      "seed": 109,
+      "character_name": "Bolt, Pip",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}
