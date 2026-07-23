@@ -171,9 +171,40 @@ async def export_story(req: ExportRequest):
 
 @app.get("/api/exports/{slug}/{format}")
 async def download_export(slug: str, format: str):
-    filepath = os.path.join("stories", slug, f"{slug}.{format}")
-    if not os.path.exists(filepath):
-        raise HTTPException(status_code=404, detail="Export not found")
+    story_dir = os.path.join("stories", slug)
+    if not os.path.exists(story_dir):
+        raise HTTPException(status_code=404, detail="Story not found")
+
+    # Always regenerate HTML exports with the latest exporter code
+    if format == "html":
+        try:
+            from export_pipeline.html_exporter import export_html
+            story_json = os.path.join(story_dir, f"{slug}_story.json")
+            if not os.path.isfile(story_json):
+                raise HTTPException(status_code=404, detail="Story data not found")
+            with open(story_json, encoding="utf-8") as f:
+                story = Story.from_json(f.read())
+            images_registry = ImageRegistry.load(story_dir, slug)
+            audio_files = {}
+            manifest_path = os.path.join(story_dir, f"{slug}_audio", "manifest.json")
+            if os.path.exists(manifest_path):
+                with open(manifest_path) as f:
+                    manifest = json.load(f)
+                for k, v in manifest.get("files", {}).items():
+                    audio_files[int(k)] = v
+            filepath = export_html(story, images_registry, audio_files, os.path.join(story_dir, f"{slug}.html"))
+        except HTTPException:
+            raise
+        except Exception as exc:
+            logger.error("HTML regeneration failed for %s: %s", slug, exc)
+            filepath = os.path.join(story_dir, f"{slug}.html")
+            if not os.path.exists(filepath):
+                raise HTTPException(status_code=500, detail="Failed to regenerate HTML export")
+    else:
+        filepath = os.path.join(story_dir, f"{slug}.{format}")
+        if not os.path.exists(filepath):
+            raise HTTPException(status_code=404, detail="Export not found")
+
     media_types = {"html": "text/html", "pdf": "application/pdf", "epub": "application/epub+zip"}
     return FileResponse(filepath, media_type=media_types.get(format), filename=f"{slug}.{format}")
 

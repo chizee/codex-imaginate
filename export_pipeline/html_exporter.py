@@ -60,7 +60,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   const totalPages = {total};
   let currentPage = 0;
   let autoplay = false;
-  let autoTimeout = null;
 
   function goTo(idx) {{
     if (idx < 0 || idx >= totalPages) return;
@@ -70,11 +69,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     document.getElementById('next-btn').disabled = idx === totalPages - 1;
     currentPage = idx;
     stopAllAudio();
-    // If autoplay is on, start narrating this page after a brief pause
-    if (autoplay) {{
-      if (autoTimeout) clearTimeout(autoTimeout);
-      autoTimeout = setTimeout(startNarrating, 400);
-    }}
+    // When autoplay is on, start narration immediately (no setTimeout — browser blocks it)
+    if (autoplay) startCurrentAudio();
   }}
 
   function stopAllAudio() {{
@@ -85,39 +81,35 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     return document.querySelectorAll('audio')[currentPage];
   }}
 
-  function startNarrating() {{
+  function startCurrentAudio() {{
     const audio = currentAudio();
-    if (audio) {{
-      audio.play().catch(() => {{}});
-    }}
+    if (audio) audio.play().catch(() => {{}});
   }}
 
   function toggleAutoPlay() {{
     const btn = document.getElementById('play-btn');
     autoplay = !autoplay;
+    btn.textContent = autoplay ? '⏹ Stop' : '▶ Play';
     if (autoplay) {{
-      btn.textContent = '⏹ Stop';
       stopAllAudio();
-      // Move to first page if at the end
       if (currentPage >= totalPages - 1) goTo(0);
-      startNarrating();
+      else startCurrentAudio();
     }} else {{
-      btn.textContent = '▶ Play';
       stopAllAudio();
-      if (autoTimeout) clearTimeout(autoTimeout);
     }}
   }}
 
-  // When audio ends, advance to next scene automatically
-  document.querySelectorAll('audio').forEach(a => a.addEventListener('ended', () => {{
-    if (autoplay && currentPage < totalPages - 1) {{
+  // Audio ended → auto-advance and auto-narrate next page
+  document.addEventListener('ended', function(e) {{
+    if (e.target.tagName !== 'AUDIO' || !autoplay) return;
+    if (currentPage < totalPages - 1) {{
       goTo(currentPage + 1);
-    }} else if (autoplay) {{
-      // Reached the end
-      document.getElementById('play-btn').textContent = '▶ Play';
+    }} else {{
+      btn = document.getElementById('play-btn');
+      btn.textContent = '▶ Play';
       autoplay = false;
     }}
-  }}));
+  }}, true);
 
   // Keyboard controls
   document.addEventListener('keydown', e => {{
@@ -133,6 +125,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     const diff = touchStartX - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 50) goTo(currentPage + (diff > 0 ? 1 : -1));
   }});
+
+  // Show first page on load
+  goTo(0);
 </script>
 </body>
 </html>"""
