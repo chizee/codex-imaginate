@@ -1,0 +1,115 @@
+[
+  {
+    "index": 1,
+    "title": "The Sky Wakes Up",
+    "text": "Every evening, when the sun dipped below the hills, the sky would fill with stars popping awake one by one. They twinkled and danced, eager to light up the night. But one little star named Stella stayed hidden behind a fluffy cloud, her tiny glow barely a flicker.",
+    "description": "A beautiful twilight sky transitioning from orange to deep blue. Several bright stars are popping into view with cheerful expressions, twinkling boldly. In the lower corner, a small fluffy purple-tinted cloud has a tiny pale golden star peeking out from behind it, looking nervous with big worried silver eyes. Her glow is very dim.",
+    "location": "The Twilight Sky",
+    "characters": [
+      "Stella",
+      "The Other Stars"
+    ],
+    "mood": "Peaceful but with a hint of loneliness",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 2,
+    "title": "Afraid of the Dark",
+    "text": "Stella was afraid of the dark. It seemed so big and so empty, stretching on forever and ever. The other stars called out to her, but Stella just hugged her little points close and wished the night would end.",
+    "description": "Close-up of Stella behind the cloud, hugging her five rounded points together like a child hugging their knees. Her silver eyes are wide with fear, and her rosy cheeks look pale. The background is a vast, deep dark blue-black sky that feels enormous and empty. A few distant stars twinkle far away, looking very small against the darkness.",
+    "location": "The Twilight Sky",
+    "characters": [
+      "Stella"
+    ],
+    "mood": "Vulnerable and fearful",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 3,
+    "title": "A Silver Glow Appears",
+    "text": "Then, something wonderful happened. A soft, silvery light began to rise over the horizon, gentle as a lullaby. It was Luna, the crescent moon, floating up into the sky with a warm and steady glow.",
+    "description": "The horizon glows with a soft silver-white light as Luna the crescent moon rises gracefully. Luna has a serene face with gentle closed eyes, long lashes, and a warm smile. Tiny stars form a crown along her top curve. The dark sky around her is now bathed in a comforting pearlescent glow. Stella peeks out from her cloud, eyes wide with wonder, her glow slightly brighter.",
+    "location": "The Horizon Sky",
+    "characters": [
+      "Stella",
+      "Luna"
+    ],
+    "mood": "Hopeful and magical",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 4,
+    "title": "Luna's Gentle Words",
+    "text": "\"Hello, little one,\" Luna whispered softly. \"I see you hiding. You don't have to be afraid — I am here, and I will always be here to watch over you.\" Stella blinked her big silver eyes and felt something warm bloom inside her tiny chest.",
+    "description": "Luna's large crescent face is close to Stella, with a gentle, nurturing smile and half-open kind eyes. A beam of soft silver moonlight stretches from Luna to Stella like a gentle blanket. Stella floats just in front of the cloud, looking up at Luna with wonder and a small hopeful smile. Stella's golden glow is growing a little brighter, and her rosy cheeks are pinker.",
+    "location": "The Moonlit Sky",
+    "characters": [
+      "Stella",
+      "Luna"
+    ],
+    "mood": "Tender and comforting",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 5,
+    "title": "A Brave Little Step",
+    "text": "With Luna's silver light wrapping around her like a hug, Stella took a deep breath and floated out from behind her cloud. The dark didn't feel so scary anymore — not with the moon's gentle glow right beside her.",
+    "description": "Stella floats out from behind the cloud into the open sky, her little points stretched out bravely. A visible trail of soft silver moonlight from Luna wraps around Stella like a translucent scarf or blanket. Stella's glow is now a warm, steady golden light. The dark sky around her is beautifully dotted with other stars, and the darkness now looks soft and velvety rather than scary.",
+    "location": "The Moonlit Sky",
+    "characters": [
+      "Stella",
+      "Luna"
+    ],
+    "mood": "Courageous and uplifting",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 6,
+    "title": "Dancing with the Stars",
+    "text": "The other stars cheered when they saw Stella shining so brightly. They twirled and sparkled around her, and for the first time, Stella twirled right back, laughing as stardust sprinkled from her happy little points.",
+    "description": "A joyful scene with Stella in the center, glowing brightly golden with a big happy smile, spinning and trailing sparkling stardust from her points. Around her, several colorful stars — blue, white, and yellow — are dancing and twirling with cheerful expressions. Luna watches from above with a proud, warm smile, her silver light bathing the whole scene. The sky is a rich, beautiful indigo filled with sparkles.",
+    "location": "The Starlit Sky",
+    "characters": [
+      "Stella",
+      "Luna",
+      "The Other Stars"
+    ],
+    "mood": "Joyful and celebratory",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 7,
+    "title": "A Promise in the Sky",
+    "text": "As the night went on, Stella looked up at Luna and smiled. \"Will you always be here?\" she asked. Luna smiled back and whispered, \"Every single night, little star. The dark is never truly dark — because you and I will always light it up together.\"",
+    "description": "A tender, quiet moment. Stella floats close to Luna, looking up with grateful, shining silver eyes and a peaceful smile. Luna gazes down at Stella with loving, half-closed eyes and a soft smile. The sky around them is calm and beautiful, with a blanket of softly twinkling stars. A gentle silver glow connects them like an invisible bond. The overall feeling is serene and safe.",
+    "location": "The Starlit Sky",
+    "characters": [
+      "Stella",
+      "Luna"
+    ],
+    "mood": "Warm, peaceful, and loving",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 8,
+    "title": "The Bravest Little Star",
+    "text": "And from that night on, Stella was never afraid of the dark again. Because she knew that no matter how big the night seemed, the moon was always watching over her — and her own little light was stronger than she ever imagined.",
+    "description": "A wide, beautiful panorama of the night sky. Stella shines brightly in the center foreground, glowing with confident golden light, a happy and peaceful expression on her face. Luna's crescent glows serenely in the upper portion of the sky, watching over everything. The entire sky is filled with twinkling stars, and the darkness looks beautiful and velvety, not scary at all. Soft clouds drift below like a peaceful sea.",
+    "location": "The Night Sky",
+    "characters": [
+      "Stella",
+      "Luna",
+      "The Other Stars"
+    ],
+    "mood": "Triumphant, warm, and reassuring",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  }
+]

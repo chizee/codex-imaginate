@@ -1,0 +1,38 @@
+{
+  "slug": "a-shy-little-star-whos-afraid-of-the-dark-discove",
+  "prompt": "A shy little star who's afraid of the dark discovers that the moonlight is always watching over her",
+  "age_group": "kids",
+  "output_dir": "stories/a-shy-little-star-whos-afraid-of-the-dark-discove",
+  "phases": {
+    "script": {
+      "phase": "script",
+      "status": "running",
+      "error": null
+    },
+    "character_refs": {
+      "phase": "character_refs",
+      "status": "pending",
+      "error": null
+    },
+    "scene_images": {
+      "phase": "scene_images",
+      "status": "pending",
+      "error": null
+    },
+    "narration": {
+      "phase": "narration",
+      "status": "pending",
+      "error": null
+    },
+    "video": {
+      "phase": "video",
+      "status": "pending",
+      "error": null
+    },
+    "export": {
+      "phase": "export",
+      "status": "pending",
+      "error": null
+    }
+  }
+}

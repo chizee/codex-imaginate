@@ -277,7 +277,14 @@ async function generateStory() {
         voice: document.getElementById('voice-select').value,
       })
     });
-    const data = await resp.json();
+    const contentType = resp.headers.get('content-type') || '';
+    let data;
+    if (contentType.includes('application/json')) {
+      data = await resp.json();
+    } else {
+      const text = await resp.text();
+      throw new Error('Server returned ' + resp.status + ' (possible timeout). Pipeline took too long — try a shorter prompt or use the CLI instead.');
+    }
     if (!resp.ok) throw new Error(data.detail || 'Pipeline failed');
 
     setPhase(5);
