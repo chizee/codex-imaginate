@@ -4,7 +4,7 @@
 
 [![Track](https://img.shields.io/badge/Track-AI%20Showrunner-c47a1a)]()
 [![Qwen Cloud](https://img.shields.io/badge/Powered%20by-Qwen%20Cloud-2563eb)]()
-[![License](https://img.shields.io/badge/License-MIT-green)]()
+[![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)]()
 
 ---
 
@@ -129,7 +129,7 @@ The combination of Codex's rapid code generation and GPT-5.6's reasoning capabil
 
 ## 📋 Submission Checklist
 
-- ✅ Public GitHub repo with MIT license
+- ✅ Public GitHub repo (All Rights Reserved — replaces MIT for hackathon protection)
 - ✅ Proof of Alibaba Cloud deployment (see `docs/alibaba-proof.md`)
 - ✅ Architecture diagram (see `docs/architecture.md`)
 - ✅ Track identification: AI Showrunner
@@ -140,4 +140,10 @@ The combination of Codex's rapid code generation and GPT-5.6's reasoning capabil
 
 ## 📄 License
 
-MIT
+**All Rights Reserved.** This project is submitted for the OpenAI Build Week
+2026 Codex Hackathon for judging purposes only. Except as granted to hackathon
+organizers and judges for evaluation, no part of this repository may be
+reproduced, distributed, or transmitted without prior written permission.
+
+See [LICENSE](./LICENSE) for full terms. The repository will be taken private
+after the hackathon winner announcement.
