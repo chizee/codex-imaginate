@@ -175,8 +175,8 @@ async def download_export(slug: str, format: str):
     if not os.path.exists(story_dir):
         raise HTTPException(status_code=404, detail="Story not found")
 
-    # Regenerate HTML and PDF with the latest exporter code
-    if format in ("html", "pdf"):
+    # Regenerate HTML, PDF, and EPUB with the latest exporter code
+    if format in ("html", "pdf", "epub"):
         try:
             story_json = os.path.join(story_dir, f"{slug}_story.json")
             if not os.path.isfile(story_json):
@@ -184,20 +184,30 @@ async def download_export(slug: str, format: str):
             with open(story_json, encoding="utf-8") as f:
                 story = Story.from_json(f.read())
             images_registry = ImageRegistry.load(story_dir, slug)
-            audio_files = {}
-            manifest_path = os.path.join(story_dir, f"{slug}_audio", "manifest.json")
-            if os.path.exists(manifest_path):
-                with open(manifest_path) as f:
-                    manifest = json.load(f)
-                for k, v in manifest.get("files", {}).items():
-                    audio_files[int(k)] = v
 
             if format == "html":
                 from export_pipeline.html_exporter import export_html
+                audio_files = {}
+                manifest_path = os.path.join(story_dir, f"{slug}_audio", "manifest.json")
+                if os.path.exists(manifest_path):
+                    with open(manifest_path) as f:
+                        manifest = json.load(f)
+                    for k, v in manifest.get("files", {}).items():
+                        audio_files[int(k)] = v
                 filepath = export_html(story, images_registry, audio_files, os.path.join(story_dir, f"{slug}.html"))
-            else:
+            elif format == "pdf":
                 from export_pipeline.pdf_exporter import export_pdf
+                audio_files = {}
+                manifest_path = os.path.join(story_dir, f"{slug}_audio", "manifest.json")
+                if os.path.exists(manifest_path):
+                    with open(manifest_path) as f:
+                        manifest = json.load(f)
+                    for k, v in manifest.get("files", {}).items():
+                        audio_files[int(k)] = v
                 filepath = export_pdf(story, images_registry, audio_files, os.path.join(story_dir, f"{slug}.pdf"))
+            else:
+                from export_pipeline.epub_exporter import export_epub
+                filepath = export_epub(story, images_registry, os.path.join(story_dir, f"{slug}.epub"))
         except HTTPException:
             raise
         except Exception as exc:

@@ -1,13 +1,36 @@
 """EPUB exporter — creates a Kindle/Apple Books compatible ebook from a story."""
 
 import os
+import base64
 import logging
+from io import BytesIO
 from typing import Optional
+
+from PIL import Image
 
 from shared.models.story import Story
 from image_generation.image_registry import ImageRegistry
 
 logger = logging.getLogger(__name__)
+
+
+def _compress_image(filepath: str) -> bytes:
+    """Resize (max 1024px) and compress image, return JPEG bytes."""
+    try:
+        img = Image.open(filepath)
+        max_dim = 1024
+        if max(img.size) > max_dim:
+            ratio = max_dim / max(img.size)
+            new_size = (int(img.size[0] * ratio), int(img.size[1] * ratio))
+            img = img.resize(new_size, Image.LANCZOS)
+        buf = BytesIO()
+        if img.mode in ("RGBA", "P"):
+            img = img.convert("RGB")
+        img.save(buf, format="JPEG", quality=85, optimize=True)
+        return buf.getvalue()
+    except Exception:
+        with open(filepath, "rb") as f:
+            return f.read()
 
 
 def export_epub(
@@ -61,17 +84,14 @@ def export_epub(
             with open(cover_img.local_path, "rb") as f:
                 book.set_cover("cover.png", f.read())
 
-        # Add scene images as EPUB resources
+        # Add scene images as EPUB resources (compressed JPEG)
         image_items = {}
         for img_record in scene_imgs:
             if img_record.local_path and os.path.exists(img_record.local_path):
-                ext = os.path.splitext(img_record.local_path)[1].lower()
-                mime = "image/png" if ext == ".png" else "image/jpeg"
                 img_item = epub.EpubImage()
-                img_item.file_name = f"images/scene_{img_record.scene_index:02d}{ext}"
-                img_item.media_type = mime
-                with open(img_record.local_path, "rb") as f:
-                    img_item.content = f.read()
+                img_item.file_name = f"images/scene_{img_record.scene_index:02d}.jpg"
+                img_item.media_type = "image/jpeg"
+                img_item.content = _compress_image(img_record.local_path)
                 book.add_item(img_item)
                 image_items[img_record.scene_index] = img_item
 
@@ -90,17 +110,12 @@ def export_epub(
             if img_item:
                 img_html = f'<div class="scene-image"><img src="{img_item.file_name}" alt="Scene {scene.index}" style="max-width:100%;height:auto;"/></div>'
 
-            chapter.content = f"""<?xml version='1.0' encoding='utf-8'?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head><title>{scene.title}</title></head>
-<body>
-  <div class="scene">
-    <h2>{scene.title}</h2>
-    {img_html}
-    <p class="story-text">{scene.text}</p>
-  </div>
-</body>
-</html>"""
+            title = scene.title or f"Scene {scene.index}"
+            text = scene.text or ""
+            html_content = '<!DOCTYPE html>'
+            html_content += f'<html><head><title>{title}</title></head>'
+            html_content += f'<body><div class="scene"><h2>{title}</h2>{img_html}<p class="story-text">{text}</p></div></body></html>'
+            chapter.content = html_content
 
             book.add_item(chapter)
             chapters.append(chapter)
