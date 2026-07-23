@@ -1,0 +1,138 @@
+[
+  {
+    "index": 1,
+    "title": "The Cloud School",
+    "text": "High up in the bright blue sky, all the young clouds were learning to make rain. They puffed up big and proud, letting gentle showers fall to the earth below. But little Nimbus tried and tried, and not a single drop came out.",
+    "description": "A bright blue sky with several fluffy clouds of different sizes. In the center, small fluffy Nimbus looks strained and worried, cheeks puffed out, eyes squeezed shut. Around him, other clouds have gentle blue rain falling beneath them. The sun peeks from the corner. Soft, pastel color palette with warm golden sunlight.",
+    "location": "The Sky - Cloud School",
+    "characters": [
+      "Nimbus"
+    ],
+    "mood": "Hopeful but slightly sad",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 2,
+    "title": "Feeling Left Out",
+    "text": "The other clouds cheered as their rain made the gardens grow. Nimbus floated away to a quiet corner of the sky, feeling small and useless. 'Why can't I make rain like everyone else?' he whispered to the wind.",
+    "description": "Nimbus floats alone at the edge of the sky, looking down sadly with big droopy blue eyes. In the background, other clouds are happily raining over green landscapes with tiny rainbows. Nimbus is slightly translucent, looking small and lonely. The sky transitions from warm golden near the other clouds to cool blue-purple near Nimbus.",
+    "location": "The Sky - Quiet Corner",
+    "characters": [
+      "Nimbus"
+    ],
+    "mood": "Lonely and wistful",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 3,
+    "title": "A Friend Appears",
+    "text": "Just then, a big friendly cloud named Cumulus floated over. 'Hey there, little one,' he said warmly. 'I've seen you trying so hard. Maybe you're not broken — maybe you're just different in a wonderful way.'",
+    "description": "Large, kind Cumulus floats next to tiny Nimbus. Cumulus has a warm, reassuring smile and is gently nudging Nimbus with his fluffy edge. Nimbus looks up with surprised, hopeful eyes. Soft pink and orange sunset light glows around them. The sky is a gentle gradient of lavender and peach.",
+    "location": "The Sky - Quiet Corner",
+    "characters": [
+      "Nimbus",
+      "Cumulus"
+    ],
+    "mood": "Warm and comforting",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 4,
+    "title": "Looking Down Together",
+    "text": "Cumulus guided Nimbus to look down at the world below. There, a beautiful meadow of flowers was drooping and thirsty. A tiny brown bird sat on a wilting sunflower, looking up at the sky with hopeful eyes.",
+    "description": "View from above looking down at a colorful but drooping flower meadow. Daisies, poppies, sunflowers, and lavender all bend downward, looking thirsty and tired. A small brown bird sits on a wilting sunflower, looking up. The colors of the flowers are slightly muted. Dry, cracked earth is visible between the flowers. Warm but slightly hazy light.",
+    "location": "The Flower Meadow",
+    "characters": [
+      "The Flower Meadow"
+    ],
+    "mood": "Tender and concerned",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 5,
+    "title": "Trying Again",
+    "text": "Nimbus puffed himself up as big as he could. He scrunched his face and squeezed his eyes shut, trying so hard to make rain for the thirsty flowers. But still... not a single drop fell.",
+    "description": "Nimbus is puffed up to his maximum size, face scrunched up with effort, tiny eyebrows furrowed, fists clenched. His whole body is tense and slightly trembling. Below him, the thirsty flowers look up hopefully. Cumulus watches from the side with a supportive expression. The sky is bright blue with soft white wisps.",
+    "location": "The Sky - Above the Meadow",
+    "characters": [
+      "Nimbus",
+      "Cumulus"
+    ],
+    "mood": "Determined but frustrated",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 6,
+    "title": "The Little Bird's Song",
+    "text": "Then the tiny brown bird below began to sing the silliest, most wonderful song. It was so funny and sweet that Nimbus couldn't help it — a tiny giggle bubbled up inside him, then a chuckle, then a big, joyful belly laugh!",
+    "description": "The small brown bird stands on the sunflower with its beak open wide, singing with musical notes floating around it. The bird looks playful and silly, wings spread in a funny dance pose. Above, Nimbus's expression is changing from sad to a wide, eyes-crinkled laugh, cheeks rosy. Golden sparkles begin to appear around Nimbus's edges. Warm, joyful lighting.",
+    "location": "The Sky - Above the Meadow",
+    "characters": [
+      "Nimbus",
+      "The Flower Meadow"
+    ],
+    "mood": "Joyful and playful",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 7,
+    "title": "The Most Beautiful Rain",
+    "text": "And then something magical happened! From Nimbus's happy tears of laughter, the most beautiful sparkling rain began to fall. Each drop shimmered with rainbow colors — pink, gold, blue, and green — twinkling like tiny jewels in the sunlight!",
+    "description": "Nimbus is laughing with eyes closed in pure joy, mouth wide open in delight. From beneath him, sparkling rainbow-colored raindrops fall in a beautiful cascade. Each raindrop glows with different colors — pink, gold, turquoise, emerald green. The raindrops leave tiny trails of light. The entire scene is bathed in magical, prismatic light. Cumulus watches in amazement with wide eyes.",
+    "location": "The Sky - Above the Meadow",
+    "characters": [
+      "Nimbus",
+      "Cumulus"
+    ],
+    "mood": "Magical and wondrous",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 8,
+    "title": "The Meadow Blooms",
+    "text": "The rainbow rain touched the thirsty flowers, and they sprang back to life, more beautiful than ever! The little bird danced and sang, and the whole meadow sparkled with joy. Nimbus had never felt so happy!",
+    "description": "The meadow below is now vibrantly alive — flowers stand tall and bright, glowing with extra-vivid colors. The brown bird dances happily mid-air with wings spread. Rainbow-tinted water droplets cling to petals and leaves like jewels. A soft rainbow arcs across the sky above. Nimbus floats above, glowing golden, smiling down with pure happiness. Everything is lush, vibrant, and sparkling.",
+    "location": "The Flower Meadow",
+    "characters": [
+      "Nimbus",
+      "The Flower Meadow"
+    ],
+    "mood": "Triumphant and joyful",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 9,
+    "title": "A Special Gift",
+    "text": "Cumulus smiled proudly at his little friend. 'You see, Nimbus? You were never broken. Your rain comes from joy — and that makes it the most beautiful rain in the whole wide sky.' Nimbus beamed, glowing brighter than ever before.",
+    "description": "Cumulus and Nimbus float side by side in a warm sunset sky. Cumulus has a proud, gentle smile, looking down at Nimbus warmly. Nimbus glows with a bright golden light, smiling radiantly, eyes sparkling with happiness. Tiny rainbow droplets still gently fall from Nimbus. The sky is painted in warm oranges, pinks, and purples. Other clouds in the background look on with admiring expressions.",
+    "location": "The Sky - Sunset",
+    "characters": [
+      "Nimbus",
+      "Cumulus"
+    ],
+    "mood": "Warm, proud, and loving",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  },
+  {
+    "index": 10,
+    "title": "Nimbus's Promise",
+    "text": "From that day on, Nimbus traveled the sky bringing his sparkling rainbow rain to every thirsty garden and sad little flower. And he learned that being different isn't something to hide — it's the most wonderful gift of all. Because the best things in life come straight from a joyful heart!",
+    "description": "Nimbus floats happily across a vast, beautiful sky, leaving a trail of sparkling rainbow rain below. Underneath, a patchwork of gardens, meadows, and forests all bloom vibrantly. Multiple small rainbows dot the landscape. Nimbus glows golden and looks confident and happy. The scene is wide and panoramic, full of color and life. A warm, golden light fills the entire image.",
+    "location": "The Sky - Wide Open Sky",
+    "characters": [
+      "Nimbus"
+    ],
+    "mood": "Uplifting and hopeful",
+    "continuity_class": "HARD_CUT",
+    "state_changes": {}
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "slug": "a-lonely-cloud-named-nimbus-cant-seem-to-make-rai",
+  "prompt": "A lonely cloud named Nimbus can't seem to make rain like the other clouds — until he discovers that his tears of laughter are the most beautiful rain of all",
+  "age_group": "kids",
+  "output_dir": "stories/a-lonely-cloud-named-nimbus-cant-seem-to-make-rai",
+  "phases": {
+    "script": {
+      "phase": "script",
+      "status": "running",
+      "error": null
+    },
+    "character_refs": {
+      "phase": "character_refs",
+      "status": "pending",
+      "error": null
+    },
+    "scene_images": {
+      "phase": "scene_images",
+      "status": "pending",
+      "error": null
+    },
+    "narration": {
+      "phase": "narration",
+      "status": "pending",
+      "error": null
+    },
+    "video": {
+      "phase": "video",
+      "status": "pending",
+      "error": null
+    },
+    "export": {
+      "phase": "export",
+      "status": "pending",
+      "error": null
+    }
+  }
+}

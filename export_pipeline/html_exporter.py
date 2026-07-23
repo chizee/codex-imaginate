@@ -10,6 +10,9 @@ import json
 import mimetypes
 import logging
 from typing import Optional
+from io import BytesIO
+
+from PIL import Image
 
 from shared.models.story import Story
 from image_generation.image_registry import ImageRegistry
@@ -50,15 +53,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <button class="nav-btn" id="prev-btn" onclick="goTo(currentPage-1)" disabled>← Previous</button>
   <button onclick="goTo(0)">⏮ Cover</button>
   <div id="nav-dots">{dots}</div>
-  <button id="play-btn" onclick="toggleNarrate()">▶ Narrate</button>
-  <button id="auto-btn" onclick="toggleAutoPlay()">▶ Autoplay</button>
+  <button id="play-btn" onclick="toggleAutoPlay()">▶ Play</button>
   <button class="nav-btn" id="next-btn" onclick="goTo(currentPage+1)">Next →</button>
 </div>
 <script>
   const totalPages = {total};
   let currentPage = 0;
   let autoplay = false;
-  let playTimer = null;
+  let autoTimeout = null;
 
   function goTo(idx) {{
     if (idx < 0 || idx >= totalPages) return;
@@ -67,7 +69,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     document.getElementById('prev-btn').disabled = idx === 0;
     document.getElementById('next-btn').disabled = idx === totalPages - 1;
     currentPage = idx;
-    // Pause any playing audio
+    stopAllAudio();
+    // If autoplay is on, start narrating this page after a brief pause
+    if (autoplay) {{
+      if (autoTimeout) clearTimeout(autoTimeout);
+      autoTimeout = setTimeout(startNarrating, 400);
+    }}
+  }}
+
+  function stopAllAudio() {{
     document.querySelectorAll('audio').forEach(a => {{ a.pause(); a.currentTime = 0; }});
   }}
 
@@ -75,58 +85,45 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     return document.querySelectorAll('audio')[currentPage];
   }}
 
-  function toggleNarrate() {{
-    const btn = document.getElementById('play-btn');
+  function startNarrating() {{
     const audio = currentAudio();
-    if (!audio) {{ btn.textContent = '▶ Narrate'; return; }}
-    if (audio.paused) {{
+    if (audio) {{
       audio.play().catch(() => {{}});
-      btn.textContent = '⏸ Pause';
-    }} else {{
-      audio.pause();
-      btn.textContent = '▶ Narrate';
     }}
   }}
 
   function toggleAutoPlay() {{
-    const btn = document.getElementById('auto-btn');
+    const btn = document.getElementById('play-btn');
     autoplay = !autoplay;
-    btn.textContent = autoplay ? '⏹ Stop' : '▶ Autoplay';
     if (autoplay) {{
-      document.getElementById('play-btn').textContent = '▶ Narrate';
-      advanceIfAuto();
-    }}
-  }}
-
-  function advanceIfAuto() {{
-    if (!autoplay) return;
-    const audio = currentAudio();
-    if (audio && !audio.paused) {{
-      // Wait for audio to end
-      audio.addEventListener('ended', function handler() {{
-        audio.removeEventListener('ended', handler);
-        if (autoplay && currentPage < totalPages - 1) goTo(currentPage + 1);
-        if (autoplay) setTimeout(advanceIfAuto, 800);
-      }});
+      btn.textContent = '⏹ Stop';
+      stopAllAudio();
+      // Move to first page if at the end
+      if (currentPage >= totalPages - 1) goTo(0);
+      startNarrating();
     }} else {{
-      // No audio or already stopped — wait then advance
-      if (currentPage < totalPages - 1) {{
-        setTimeout(() => {{ if (autoplay) goTo(currentPage + 1); setTimeout(advanceIfAuto, 800); }}, 3000);
-      }}
+      btn.textContent = '▶ Play';
+      stopAllAudio();
+      if (autoTimeout) clearTimeout(autoTimeout);
     }}
   }}
 
-  // Audio ended handler for normal playback
+  // When audio ends, advance to next scene automatically
   document.querySelectorAll('audio').forEach(a => a.addEventListener('ended', () => {{
-    document.getElementById('play-btn').textContent = '▶ Narrate';
-    if (autoplay) advanceIfAuto();
+    if (autoplay && currentPage < totalPages - 1) {{
+      goTo(currentPage + 1);
+    }} else if (autoplay) {{
+      // Reached the end
+      document.getElementById('play-btn').textContent = '▶ Play';
+      autoplay = false;
+    }}
   }}));
 
   // Keyboard controls
   document.addEventListener('keydown', e => {{
     if (e.key === 'ArrowLeft') goTo(currentPage - 1);
     if (e.key === 'ArrowRight') goTo(currentPage + 1);
-    if (e.key === ' ') {{ e.preventDefault(); toggleNarrate(); }}
+    if (e.key === ' ') {{ e.preventDefault(); toggleAutoPlay(); }}
   }});
 
   // Touch swipe
@@ -260,7 +257,35 @@ def export_html(
 
 
 def _file_to_b64(filepath: str, mime: str) -> str:
-    """Read a file and return a base64 data URI."""
+    """Read a file and return a base64 data URI.
+
+    Images are resized (max 1024px longest edge) and compressed as JPEG
+    (quality 85) before encoding to keep the HTML file size manageable.
+    Audio files are embedded as-is.
+    """
+    if mime.startswith("image/"):
+        try:
+            img = Image.open(filepath)
+            # Resize if larger than 1024px on longest edge
+            max_dim = 1024
+            w, h = img.size
+            if w > max_dim or h > max_dim:
+                ratio = max_dim / max(w, h)
+                img = img.resize((int(w * ratio), int(h * ratio)), Image.LANCZOS)
+            # Convert to RGB if RGBA (JPEG doesn't support alpha)
+            if img.mode == "RGBA":
+                bg = Image.new("RGB", img.size, (245, 240, 232))
+                bg.paste(img, mask=img.split()[3])
+                img = bg
+            elif img.mode != "RGB":
+                img = img.convert("RGB")
+            buf = BytesIO()
+            img.save(buf, format="JPEG", quality=85, optimize=True)
+            b64 = base64.b64encode(buf.getvalue()).decode("utf-8")
+            return f"data:image/jpeg;base64,{b64}"
+        except Exception as exc:
+            logger.warning("Image compression failed for %s: %s", filepath, exc)
+            # Fall through to raw encoding
     with open(filepath, "rb") as f:
         b64 = base64.b64encode(f.read()).decode("utf-8")
     return f"data:{mime};base64,{b64}"

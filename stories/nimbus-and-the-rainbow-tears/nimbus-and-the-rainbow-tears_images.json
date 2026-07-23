@@ -1,0 +1,112 @@
+{
+  "images": [
+    {
+      "scene_index": 1,
+      "prompt": "Characters: Nimbus: A small, extra-fluffy white cloud with soft rounded edges, slightly smaller than the other clouds. Has big, expressive sky-blue eyes and a gentle, shy smile. A faint golden shimmer glows around his edges when he's happy. No rain falls from him — he stays perfectly dry underneath., A bright blue sky with several fluffy clouds of different sizes. In the center, small fluffy Nimbus looks strained and worried, cheeks puffed out, eyes squeezed shut. Around him, other clouds have gentle blue rain falling beneath them. The sun peeks from the corner. Soft, pastel color palette with warm golden sunlight, featuring Nimbus, at The Sky - Cloud School, Hopeful but slightly sad atmosphere, Soft, dreamy watercolor-inspired digital illustrations with gentle pastel colors, fluffy textured clouds, and warm golden lighting. Characters have big, expressive eyes and rounded, friendly shapes. Sparkle and glow effects for magical moments. The overall feel is cozy, whimsical, and comforting — like a beloved picture book come to life.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/99/20260723/7a9d0e9f/475c4ac6-70db-42fc-9265-e89c0aa33c5f.png?Expires=1785403991&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=8e686eBJMM99laZXYxmri6vJ81U%3D",
+      "local_path": "stories/nimbus-and-the-rainbow-tears/nimbus-and-the-rainbow-tears_scene_01.png",
+      "seed": 101,
+      "character_name": "Nimbus",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 2,
+      "prompt": "Characters: Nimbus: A small, extra-fluffy white cloud with soft rounded edges, slightly smaller than the other clouds. Has big, expressive sky-blue eyes and a gentle, shy smile. A faint golden shimmer glows around his edges when he's happy. No rain falls from him — he stays perfectly dry underneath., Nimbus floats alone at the edge of the sky, looking down sadly with big droopy blue eyes. In the background, other clouds are happily raining over green landscapes with tiny rainbows. Nimbus is slightly translucent, looking small and lonely. The sky transitions from warm golden near the other clouds to cool blue-purple near Nimbus, featuring Nimbus, at The Sky - Quiet Corner, Lonely and wistful atmosphere, Soft, dreamy watercolor-inspired digital illustrations with gentle pastel colors, fluffy textured clouds, and warm golden lighting. Characters have big, expressive eyes and rounded, friendly shapes. Sparkle and glow effects for magical moments. The overall feel is cozy, whimsical, and comforting — like a beloved picture book come to life.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/2b/20260723/7a9d0e9f/a90a5bec-f8ac-4f34-8f1b-a72cb724426d.png?Expires=1785404032&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=umsYfYwLRCccsdrnz8%2F4ufa%2B6ic%3D",
+      "local_path": "stories/nimbus-and-the-rainbow-tears/nimbus-and-the-rainbow-tears_scene_02.png",
+      "seed": 102,
+      "character_name": "Nimbus",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 3,
+      "prompt": "Characters: Nimbus: A small, extra-fluffy white cloud with soft rounded edges, slightly smaller than the other clouds. Has big, expressive sky-blue eyes and a gentle, shy smile. A faint golden shimmer glows around his edges when he's happy. No rain falls from him — he stays perfectly dry underneath.; Cumulus: A large, broad, friendly-looking gray cloud with a wide face, kind hazel eyes, and a reassuring smile. Wears a tiny lightning-bolt pin on his side. Has a slightly darker underbelly showing he's good at making rain., Large, kind Cumulus floats next to tiny Nimbus. Cumulus has a warm, reassuring smile and is gently nudging Nimbus with his fluffy edge. Nimbus looks up with surprised, hopeful eyes. Soft pink and orange sunset light glows around them. The sky is a gentle gradient of lavender and peach, featuring Nimbus, Cumulus, at The Sky - Quiet Corner, Warm and comforting atmosphere, Soft, dreamy watercolor-inspired digital illustrations with gentle pastel colors, fluffy textured clouds, and warm golden lighting. Characters have big, expressive eyes and rounded, friendly shapes. Sparkle and glow effects for magical moments. The overall feel is cozy, whimsical, and comforting — like a beloved picture book come to life.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/bf/20260723/7a9d0e9f/30049cfc-eae8-4cb5-9556-cd6a28e09217.png?Expires=1785404046&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=KOVWk19B9dISwxnI4nFIFp5XIiI%3D",
+      "local_path": "stories/nimbus-and-the-rainbow-tears/nimbus-and-the-rainbow-tears_scene_03.png",
+      "seed": 103,
+      "character_name": "Nimbus, Cumulus",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 5,
+      "prompt": "Characters: Nimbus: A small, extra-fluffy white cloud with soft rounded edges, slightly smaller than the other clouds. Has big, expressive sky-blue eyes and a gentle, shy smile. A faint golden shimmer glows around his edges when he's happy. No rain falls from him — he stays perfectly dry underneath.; Cumulus: A large, broad, friendly-looking gray cloud with a wide face, kind hazel eyes, and a reassuring smile. Wears a tiny lightning-bolt pin on his side. Has a slightly darker underbelly showing he's good at making rain., Nimbus is puffed up to his maximum size, face scrunched up with effort, tiny eyebrows furrowed, fists clenched. His whole body is tense and slightly trembling. Below him, the thirsty flowers look up hopefully. Cumulus watches from the side with a supportive expression. The sky is bright blue with soft white wisps, featuring Nimbus, Cumulus, at The Sky - Above the Meadow, Determined but frustrated atmosphere, Soft, dreamy watercolor-inspired digital illustrations with gentle pastel colors, fluffy textured clouds, and warm golden lighting. Characters have big, expressive eyes and rounded, friendly shapes. Sparkle and glow effects for magical moments. The overall feel is cozy, whimsical, and comforting — like a beloved picture book come to life.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/db/20260723/7a9d0e9f/2b0221b1-2410-4f4d-b202-44eaaec64485.png?Expires=1785404099&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=t%2BEGUqgP54BYEsAgIEOZgVsE7ps%3D",
+      "local_path": "stories/nimbus-and-the-rainbow-tears/nimbus-and-the-rainbow-tears_scene_05.png",
+      "seed": 105,
+      "character_name": "Nimbus, Cumulus",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 6,
+      "prompt": "Characters: Nimbus: A small, extra-fluffy white cloud with soft rounded edges, slightly smaller than the other clouds. Has big, expressive sky-blue eyes and a gentle, shy smile. A faint golden shimmer glows around his edges when he's happy. No rain falls from him — he stays perfectly dry underneath.; The Flower Meadow: A vibrant meadow full of colorful wildflowers — daisies, poppies, sunflowers, and lavender — all drooping and thirsty, with a small brown bird sitting on a wilting sunflower., The small brown bird stands on the sunflower with its beak open wide, singing with musical notes floating around it. The bird looks playful and silly, wings spread in a funny dance pose. Above, Nimbus's expression is changing from sad to a wide, eyes-crinkled laugh, cheeks rosy. Golden sparkles begin to appear around Nimbus's edges. Warm, joyful lighting, featuring Nimbus, The Flower Meadow, at The Sky - Above the Meadow, Joyful and playful atmosphere, Soft, dreamy watercolor-inspired digital illustrations with gentle pastel colors, fluffy textured clouds, and warm golden lighting. Characters have big, expressive eyes and rounded, friendly shapes. Sparkle and glow effects for magical moments. The overall feel is cozy, whimsical, and comforting — like a beloved picture book come to life.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/dd/20260723/7a9d0e9f/5e9735fe-7110-405d-b149-48fd818b5449.png?Expires=1785404113&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=PmInpNGHGDwbI9TwMOgaD%2F1z0Do%3D",
+      "local_path": "stories/nimbus-and-the-rainbow-tears/nimbus-and-the-rainbow-tears_scene_06.png",
+      "seed": 106,
+      "character_name": "Nimbus, The Flower Meadow",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 7,
+      "prompt": "Characters: Nimbus: A small, extra-fluffy white cloud with soft rounded edges, slightly smaller than the other clouds. Has big, expressive sky-blue eyes and a gentle, shy smile. A faint golden shimmer glows around his edges when he's happy. No rain falls from him — he stays perfectly dry underneath.; Cumulus: A large, broad, friendly-looking gray cloud with a wide face, kind hazel eyes, and a reassuring smile. Wears a tiny lightning-bolt pin on his side. Has a slightly darker underbelly showing he's good at making rain., Nimbus is laughing with eyes closed in pure joy, mouth wide open in delight. From beneath him, sparkling rainbow-colored raindrops fall in a beautiful cascade. Each raindrop glows with different colors — pink, gold, turquoise, emerald green. The raindrops leave tiny trails of light. The entire scene is bathed in magical, prismatic light. Cumulus watches in amazement with wide eyes, featuring Nimbus, Cumulus, at The Sky - Above the Meadow, Magical and wondrous atmosphere, Soft, dreamy watercolor-inspired digital illustrations with gentle pastel colors, fluffy textured clouds, and warm golden lighting. Characters have big, expressive eyes and rounded, friendly shapes. Sparkle and glow effects for magical moments. The overall feel is cozy, whimsical, and comforting — like a beloved picture book come to life.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/bf/20260723/7a9d0e9f/eab63379-bc7b-4a45-a4e8-0c8c0e081b5c.png?Expires=1785404154&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=f5kKIR9UFffNcRt01c3zEM69nsg%3D",
+      "local_path": "stories/nimbus-and-the-rainbow-tears/nimbus-and-the-rainbow-tears_scene_07.png",
+      "seed": 107,
+      "character_name": "Nimbus, Cumulus",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 8,
+      "prompt": "Characters: Nimbus: A small, extra-fluffy white cloud with soft rounded edges, slightly smaller than the other clouds. Has big, expressive sky-blue eyes and a gentle, shy smile. A faint golden shimmer glows around his edges when he's happy. No rain falls from him — he stays perfectly dry underneath.; The Flower Meadow: A vibrant meadow full of colorful wildflowers — daisies, poppies, sunflowers, and lavender — all drooping and thirsty, with a small brown bird sitting on a wilting sunflower., The meadow below is now vibrantly alive — flowers stand tall and bright, glowing with extra-vivid colors. The brown bird dances happily mid-air with wings spread. Rainbow-tinted water droplets cling to petals and leaves like jewels. A soft rainbow arcs across the sky above. Nimbus floats above, glowing golden, smiling down with pure happiness. Everything is lush, vibrant, and sparkling, featuring Nimbus, The Flower Meadow, at The Flower Meadow, Triumphant and joyful atmosphere, Soft, dreamy watercolor-inspired digital illustrations with gentle pastel colors, fluffy textured clouds, and warm golden lighting. Characters have big, expressive eyes and rounded, friendly shapes. Sparkle and glow effects for magical moments. The overall feel is cozy, whimsical, and comforting — like a beloved picture book come to life.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/c9/20260723/7a9d0e9f/eb4d1374-9e4a-474f-a621-4b1708b00f65.png?Expires=1785404167&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=WB0q3RoXogTkoY76rlN7aMipPpg%3D",
+      "local_path": "stories/nimbus-and-the-rainbow-tears/nimbus-and-the-rainbow-tears_scene_08.png",
+      "seed": 108,
+      "character_name": "Nimbus, The Flower Meadow",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 9,
+      "prompt": "Characters: Nimbus: A small, extra-fluffy white cloud with soft rounded edges, slightly smaller than the other clouds. Has big, expressive sky-blue eyes and a gentle, shy smile. A faint golden shimmer glows around his edges when he's happy. No rain falls from him — he stays perfectly dry underneath.; Cumulus: A large, broad, friendly-looking gray cloud with a wide face, kind hazel eyes, and a reassuring smile. Wears a tiny lightning-bolt pin on his side. Has a slightly darker underbelly showing he's good at making rain., Cumulus and Nimbus float side by side in a warm sunset sky. Cumulus has a proud, gentle smile, looking down at Nimbus warmly. Nimbus glows with a bright golden light, smiling radiantly, eyes sparkling with happiness. Tiny rainbow droplets still gently fall from Nimbus. The sky is painted in warm oranges, pinks, and purples. Other clouds in the background look on with admiring expressions, featuring Nimbus, Cumulus, at The Sky - Sunset, Warm, proud, and loving atmosphere, Soft, dreamy watercolor-inspired digital illustrations with gentle pastel colors, fluffy textured clouds, and warm golden lighting. Characters have big, expressive eyes and rounded, friendly shapes. Sparkle and glow effects for magical moments. The overall feel is cozy, whimsical, and comforting — like a beloved picture book come to life.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/5b/20260723/7a9d0e9f/2c59f2fd-9618-4ed7-a9c2-30cbf94907be.png?Expires=1785404211&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=DimaaAU%2BfihOxyWnznD1WCkDNlE%3D",
+      "local_path": "stories/nimbus-and-the-rainbow-tears/nimbus-and-the-rainbow-tears_scene_09.png",
+      "seed": 109,
+      "character_name": "Nimbus, Cumulus",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "scene_index": 10,
+      "prompt": "Characters: Nimbus: A small, extra-fluffy white cloud with soft rounded edges, slightly smaller than the other clouds. Has big, expressive sky-blue eyes and a gentle, shy smile. A faint golden shimmer glows around his edges when he's happy. No rain falls from him — he stays perfectly dry underneath., Nimbus floats happily across a vast, beautiful sky, leaving a trail of sparkling rainbow rain below. Underneath, a patchwork of gardens, meadows, and forests all bloom vibrantly. Multiple small rainbows dot the landscape. Nimbus glows golden and looks confident and happy. The scene is wide and panoramic, full of color and life. A warm, golden light fills the entire image, featuring Nimbus, at The Sky - Wide Open Sky, Uplifting and hopeful atmosphere, Soft, dreamy watercolor-inspired digital illustrations with gentle pastel colors, fluffy textured clouds, and warm golden lighting. Characters have big, expressive eyes and rounded, friendly shapes. Sparkle and glow effects for magical moments. The overall feel is cozy, whimsical, and comforting — like a beloved picture book come to life.",
+      "image_url": "https://dashscope-463f.oss-accelerate.aliyuncs.com/7d/4c/20260723/7a9d0e9f/092f8c15-7e7c-43a7-8b07-5e061e774b8e.png?Expires=1785404224&OSSAccessKeyId=LTAI5tRcsWJEymQaTsKbKqGf&Signature=DXxgroQE4rUS58DFOYBKbnQ%2F0bo%3D",
+      "local_path": "stories/nimbus-and-the-rainbow-tears/nimbus-and-the-rainbow-tears_scene_10.png",
+      "seed": 110,
+      "character_name": "Nimbus",
+      "image_type": "scene",
+      "validation_status": "passed",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}

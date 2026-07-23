@@ -1,0 +1,38 @@
+{
+  "slug": "nimbus-and-the-rainbow-tears",
+  "prompt": "A lonely cloud named Nimbus can't seem to make rain like the other clouds — until he discovers that his tears of laughter are the most beautiful rain of all",
+  "age_group": "kids",
+  "output_dir": "stories/nimbus-and-the-rainbow-tears",
+  "phases": {
+    "script": {
+      "phase": "script",
+      "status": "done",
+      "error": null
+    },
+    "character_refs": {
+      "phase": "character_refs",
+      "status": "done",
+      "error": null
+    },
+    "scene_images": {
+      "phase": "scene_images",
+      "status": "done",
+      "error": null
+    },
+    "narration": {
+      "phase": "narration",
+      "status": "done",
+      "error": null
+    },
+    "video": {
+      "phase": "video",
+      "status": "done",
+      "error": null
+    },
+    "export": {
+      "phase": "export",
+      "status": "done",
+      "error": null
+    }
+  }
+}
