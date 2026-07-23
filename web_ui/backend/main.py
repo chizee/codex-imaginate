@@ -175,10 +175,9 @@ async def download_export(slug: str, format: str):
     if not os.path.exists(story_dir):
         raise HTTPException(status_code=404, detail="Story not found")
 
-    # Always regenerate HTML exports with the latest exporter code
-    if format == "html":
+    # Regenerate HTML and PDF with the latest exporter code
+    if format in ("html", "pdf"):
         try:
-            from export_pipeline.html_exporter import export_html
             story_json = os.path.join(story_dir, f"{slug}_story.json")
             if not os.path.isfile(story_json):
                 raise HTTPException(status_code=404, detail="Story data not found")
@@ -192,14 +191,20 @@ async def download_export(slug: str, format: str):
                     manifest = json.load(f)
                 for k, v in manifest.get("files", {}).items():
                     audio_files[int(k)] = v
-            filepath = export_html(story, images_registry, audio_files, os.path.join(story_dir, f"{slug}.html"))
+
+            if format == "html":
+                from export_pipeline.html_exporter import export_html
+                filepath = export_html(story, images_registry, audio_files, os.path.join(story_dir, f"{slug}.html"))
+            else:
+                from export_pipeline.pdf_exporter import export_pdf
+                filepath = export_pdf(story, images_registry, audio_files, os.path.join(story_dir, f"{slug}.pdf"))
         except HTTPException:
             raise
         except Exception as exc:
-            logger.error("HTML regeneration failed for %s: %s", slug, exc)
-            filepath = os.path.join(story_dir, f"{slug}.html")
+            logger.error("%s regeneration failed for %s: %s", format, slug, exc)
+            filepath = os.path.join(story_dir, f"{slug}.{format}")
             if not os.path.exists(filepath):
-                raise HTTPException(status_code=500, detail="Failed to regenerate HTML export")
+                raise HTTPException(status_code=500, detail=f"Failed to regenerate {format} export")
     else:
         filepath = os.path.join(story_dir, f"{slug}.{format}")
         if not os.path.exists(filepath):
