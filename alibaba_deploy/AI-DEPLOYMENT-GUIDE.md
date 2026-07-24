@@ -28,7 +28,7 @@ This installs: Python 3.12, nginx, ffmpeg, certbot, creates a systemd service, a
 
 Edit `/etc/systemd/system/imaginate.service` and replace `CHANGE_ME` with the actual API key:
 ```
-Environment="DASHSCOPE_API_KEY=sk-ws-H.XIDLXE.Dklu..."
+Environment="DASHSCOPE_API_KEY=your-dashscope-api-key-here"
 ```
 
 Then:

@@ -2,7 +2,7 @@
 
 > **One prompt → complete illustrated storybook with narration, multi-format exports**
 
-[![Track](https://img.shields.io/badge/Track-AI%20Showrunner-c47a1a)]()
+[![Track](https://img.shields.io/badge/Track-Codex%20Build%20Week-c47a1a)]()
 [![Qwen Cloud](https://img.shields.io/badge/Powered%20by-Qwen%20Cloud-2563eb)]()
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)]()
 
@@ -10,7 +10,6 @@
 
 ## 🏆 Global AI Hackathon Series with Qwen Cloud
 
-**Track:** AI Showrunner (Primary) + Autopilot Agent (Secondary)
 **Submission:** July 20, 2026
 
 ---
@@ -30,7 +29,7 @@ Imaginate turns **one sentence** into a complete, professional storybook:
 
 ### Prerequisites
 - Python 3.12+
-- Qwen Cloud API key ([sign up](https://www.qwencloud.com) — $40 free credits)
+- Qwen Cloud API key
 
 ### Run the CLI
 
@@ -132,7 +131,7 @@ The combination of Codex's rapid code generation and GPT-5.6's reasoning capabil
 - ✅ Public GitHub repo (All Rights Reserved — replaces MIT for hackathon protection)
 - ✅ Proof of Alibaba Cloud deployment (see `docs/alibaba-proof.md`)
 - ✅ Architecture diagram (see `docs/architecture.md`)
-- ✅ Track identification: AI Showrunner
+- ✅ Track identification: Codex Build Week
 - ✅ All API calls use Qwen Cloud exclusively
 - ✅ Working CLI and web UI
 
