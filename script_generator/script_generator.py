@@ -49,7 +49,38 @@ Output valid JSON only with this structure:
 
 SYSTEM_PROMPT_ADULT = """You are a creative fiction writer capable of any genre.
 Write a compelling short story (5-10 scenes) based on the user's idea.
-Output valid JSON only with the same structure as children's mode."""
+Keep each scene's narration to 2-4 sentences that will be read aloud.
+
+Output valid JSON only with this exact structure:
+{
+  "title": "Story title",
+  "characters": [
+    {
+      "name": "Character name",
+      "age": "age or age group",
+      "role": "protagonist/sidekick/antagonist/etc",
+      "appearance": "detailed visual description — hair color, skin tone, eye color, clothing, accessories, distinctive features",
+      "personality": "personality traits",
+      "notes": "any special notes"
+    }
+  ],
+  "scenes": [
+    {
+      "index": 1,
+      "title": "Scene title",
+      "text": "The narration text for this scene — 2-4 sentences that will be read aloud",
+      "description": "Visual description for illustration — describe what's SEEN only (characters, poses, expressions, background, lighting, colors). Do NOT use text/speech bubbles.",
+      "location": "Where this scene takes place",
+      "characters": ["CharacterName"],
+      "mood": "mood/atmosphere"
+    }
+  ],
+  "visual_style": "art style description for illustrations",
+  "locations": {
+    "location_name": "visual description of this location"
+  }
+}
+"""
 
 
 def generate_story(
@@ -78,13 +109,37 @@ def generate_story(
 
     logger.info("Generating story for prompt: %s", prompt[:80])
 
-    raw_json = client.chat_json(
-        prompt=full_prompt,
-        system=system,
-        temperature=0.8,
-    )
+    raw_json = None
+    data = {}
+    scenes_data = None
+    last_error = None
+    for attempt in range(1, 4):  # up to 3 attempts to get a non-empty story
+        raw_json = client.chat_json(
+            prompt=full_prompt,
+            system=system,
+            temperature=0.8,
+        )
+        data = _parse_json(raw_json)
+        scenes_data = data.get("scenes", [])
 
-    data = _parse_json(raw_json)
+        # Validate: each scene must actually carry narration text. A model may
+        # emit a skeleton (titles only, or alternate field names) which would
+        # silently starve image + TTS generation. Retry if any scene lacks text.
+        text_counts = [len(str(s.get("text", "") or s.get("narrative", ""))) for s in scenes_data]
+        if scenes_data and all(c == 0 for c in text_counts):
+            last_error = (
+                "Model returned scenes with no narration text (field mismatch "
+                "or empty output). Retrying..."
+            )
+            logger.warning("Attempt %d/3: %s", attempt, last_error)
+            continue
+        break
+
+    if not scenes_data or all(c == 0 for c in text_counts):
+        raise RuntimeError(
+            "Story generation failed after 3 attempts: model returned no usable "
+            "scene text. Last response snippet: %s" % (raw_json or "")[:300]
+        )
 
     # Build story
     bible = CharacterBible(
@@ -93,8 +148,10 @@ def generate_story(
     )
 
     for char_data in data.get("characters", []):
+        if not isinstance(char_data, dict):
+            continue
         bible.add_character(Character(
-            name=char_data["name"],
+            name=char_data.get("name", ""),
             age=char_data.get("age", ""),
             role=char_data.get("role", "protagonist"),
             appearance=char_data.get("appearance", ""),
@@ -103,13 +160,15 @@ def generate_story(
         ))
 
     scenes = []
-    for sc_data in data.get("scenes", []):
+    for i, sc_data in enumerate(data.get("scenes", [])):
+        if not isinstance(sc_data, dict):
+            continue
         scenes.append(Scene(
-            index=sc_data["index"],
-            title=sc_data.get("title", ""),
-            text=sc_data.get("text", ""),
-            description=sc_data.get("description", ""),
-            location=sc_data.get("location", ""),
+            index=sc_data.get("index", sc_data.get("number", i + 1)),
+            title=sc_data.get("title", f"Scene {i + 1}"),
+            text=sc_data.get("text", sc_data.get("narrative", "")),
+            description=sc_data.get("description", sc_data.get("scene_description", "")),
+            location=sc_data.get("location", sc_data.get("setting", "")),
             characters=sc_data.get("characters", []),
             mood=sc_data.get("mood", "neutral"),
         ))
@@ -154,6 +213,7 @@ def _age_detail(age_group: str) -> str:
         "kids-6-8": "children aged 6-8 (engaging, slightly complex, teaches a value)",
         "kids-9-12": "children aged 9-12 (adventurous, creative, growing vocabulary)",
         "kids": "children",
+        "kids_older": "children aged 9-12 (adventurous, creative, growing vocabulary)",
         "adult": "adults (any genre, can be complex)",
     }
     return mapping.get(age_group, "children")
