@@ -105,7 +105,24 @@ def generate_story(
 
     system = SYSTEM_PROMPT_KIDS if age_group == "kids" else SYSTEM_PROMPT_ADULT
     age_detail = _age_detail(age_group)
-    full_prompt = f"Write a story for {age_detail}.\n\nUser's idea: {prompt}\n\nGenerate the story in JSON format."
+
+    # Honor the user's own opening when they supply one (e.g. "Once upon a time...").
+    # Framing the prompt as "User's idea" invites the model to paraphrase instead
+    # of following it — so explicitly require the opening phrase to be kept.
+    opening_rule = ""
+    stripped = prompt.strip()
+    if stripped.lower().startswith("once upon a time"):
+        opening_rule = (
+            "\n\nThe user's idea starts with \"Once upon a time\". "
+            "Begin the first scene's narration with that exact phrase, "
+            "then continue the story in the same fairy-tale style."
+        )
+
+    full_prompt = (
+        f"Write a story for {age_detail}.\n\n"
+        f"User's idea: {prompt}\n\n"
+        f"Generate the story in JSON format.{opening_rule}"
+    )
 
     logger.info("Generating story for prompt: %s", prompt[:80])
 
