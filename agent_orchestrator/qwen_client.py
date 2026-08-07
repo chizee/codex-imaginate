@@ -204,9 +204,10 @@ class QwenClient:
                     attempt, settings.MAX_RETRIES, exc,
                 )
                 if attempt < settings.MAX_RETRIES:
-                    # On 429, back off more aggressively
+                    # On 429, back off more aggressively (image endpoint is
+                    # QPS-limited and needs a longer cooldown).
                     if "429" in str(exc):
-                        _tm.sleep(settings.RETRY_BACKOFF * attempt * 3)
+                        _tm.sleep(settings.IMAGE_429_BACKOFF * attempt)
                     else:
                         _tm.sleep(settings.RETRY_BACKOFF * attempt)
 

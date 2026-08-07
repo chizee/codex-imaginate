@@ -25,11 +25,14 @@ class Settings:
     )
 
     # Default models
-    LLM_MODEL: str = "qwen3.7-max"
-    FAST_LLM_MODEL: str = "qwen3.7-plus"
+    LLM_MODEL: str = "qwen3.6-flash"
+    FAST_LLM_MODEL: str = "qwen3.6-flash"
     IMAGE_MODEL: str = "qwen-image-2.0-pro"
     TTS_MODEL: str = "qwen3-tts-instruct-flash"
     VIDEO_MODEL: str = "wan2.7-i2v"
+
+    # Gemini API key (optional — used as primary image provider when set)
+    GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
 
     # Retry settings
     MAX_RETRIES: int = 3
@@ -37,6 +40,11 @@ class Settings:
 
     # Image settings
     IMAGE_SIZE: str = "1024x1024"
+    # Seconds to sleep between scene image calls. DashScope multimodal endpoint
+    # is QPS-limited (~0.2-0.5 req/s); pacing avoids hammering it into 429s.
+    IMAGE_SCENE_PACING: float = 38.0
+    # Longer 429 backoff for the multimodal (image) endpoint specifically.
+    IMAGE_429_BACKOFF: float = 45.0
 
     # TTS settings
     TTS_VOICE: str = "Ethan"  # Warm American male voice. Options: Ethan, Serena, Cherry (Instruct+Flash); Jennifer, Aiden (Flash only)

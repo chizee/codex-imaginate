@@ -50,7 +50,8 @@ def run_pipeline(
                 try:
                     with open(story_json) as f:
                         test_story = Story.from_json(f.read())
-                    if test_story.prompt.strip().lower() == prompt.strip().lower():
+                    if (test_story.prompt.strip().lower() == prompt.strip().lower()
+                            and test_story.age_group == age_group):
                         slug = d
                         story_dir = os.path.join(output_base, slug)
                         story = test_story

@@ -1,12 +1,15 @@
-"""Phase 2-3: Generate character reference images and scene images via Qwen Image 2.0 Pro."""
+"""Phase 2-3: Generate character reference images and scene images via ImageProvider (Gemini → Qwen fallback)."""
 
 import os
+import time as _tm
 import logging
 from typing import Optional
 
 from agent_orchestrator.qwen_client import QwenClient
 from shared.models.story import Story
+from shared.config.settings import settings
 from image_generation.image_registry import ImageRecord, ImageRegistry
+from image_generation.image_provider import ImageProvider
 from image_generation.character_consistency.reference_manager import ReferenceManager
 from image_generation.character_consistency.prompt_assembler import build_scene_prompt
 from image_generation.character_consistency.continuity_classifier import classify_continuity
@@ -22,19 +25,18 @@ def generate_references(
 
     Args:
         story: The Story with character bible populated.
-        client: QwenClient instance.
+        client: Optional QwenClient — provider handles fallback.
 
     Returns:
         ImageRegistry with reference images.
     """
-    if client is None:
-        client = QwenClient()
+    provider = ImageProvider(qwen_client=client)
 
     slug = story.slug
     output_dir = os.path.join("stories", slug)
     os.makedirs(output_dir, exist_ok=True)
 
-    ref_manager = ReferenceManager(client, output_dir, slug)
+    ref_manager = ReferenceManager(provider, output_dir, slug)
     registry = ref_manager.generate_character_refs(story.bible)
     return registry
 
@@ -49,20 +51,19 @@ def generate_scene_images(
     Args:
         story: The Story with scenes and bible.
         ref_manager: ReferenceManager (created if not provided).
-        client: QwenClient (created if not provided).
+        client: Optional QwenClient — provider handles fallback.
 
     Returns:
         ImageRegistry with scene images.
     """
-    if client is None:
-        client = QwenClient()
+    provider = ImageProvider(qwen_client=client)
 
     slug = story.slug
     output_dir = os.path.join("stories", slug)
     os.makedirs(output_dir, exist_ok=True)
 
     if ref_manager is None:
-        ref_manager = ReferenceManager(client, output_dir, slug)
+        ref_manager = ReferenceManager(provider, output_dir, slug)
         ref_manager.registry = ImageRegistry.load(output_dir, slug)
 
     registry = ImageRegistry()
@@ -76,6 +77,11 @@ def generate_scene_images(
             logger.info("Scene %d image exists, skipping", scene.index)
             previous_scene = scene
             continue
+
+        # Pace requests: DashScope multimodal endpoint is QPS-limited (~0.2-0.5
+        # req/s). Back-to-back calls trip 429s on every retry. Sleeping between
+        # scenes lets each generation complete before the next starts.
+        _tm.sleep(settings.IMAGE_SCENE_PACING)
 
         continuity = classify_continuity(scene, previous_scene)
         scene.continuity_class = continuity
